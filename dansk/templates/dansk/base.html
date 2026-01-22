@@ -1,0 +1,41 @@
+
+{% extends 'forside/base.html' %}
+{% load menu_generator %}
+{% block content %}
+ <!-- NAV BAR Start --><h3>
+        {% get_menu "NAV_MENU_LEFT" as left_menu %}
+        <div style="float:left;">
+            {% for item in left_menu %}
+                <li class="{% if item.selected %} active {% endif %}">
+                <a href="{{ item.url }}"> <i class="{{ item.icon_class }}"></i> {{ item.name }}</a>
+                </li>
+                {% if item.submenu %}
+                    <ul>
+                    {% for menu in item.submenu %}
+                        <li class="{% if menu.selected %} active {% endif %}">
+                            <a href="{{ menu.url }}">{{ menu.name }}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div></h3>
+
+      
+
+        <!-- Footer Start -->
+        {% get_menu "FOOTER_MENU_LEFT" as left_footer_menu %}
+        <div style="float:left;">
+            <!-- loop through your left footer menus -->
+        </div>
+
+        {% get_menu "FOOTER_MENU_RIGHT" as right_footer_menu %}
+        <div style="float:right;">
+            <!-- loop through your right footer menus -->
+        </div>
+        <!-- Footer End -->
+
+<h1></h1>
+{% block letter %}
+{% endblock letter %}
+{% endblock content %}
