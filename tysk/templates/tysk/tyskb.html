@@ -1,18 +1,16 @@
-{% extends 'dansk/base.html' %}
+{% extends 'tysk/base.html' %}
 {% block letter %}
-<br>
 <h1><font color=blue>B - b</font></h1>
 <h4>B er det andet (2.) bogstav i alfabetet. Det er den første konsonant</h4>
 <br>
 <div class="row">
-{% for danb in danb %}
+{% for tysb in b %}
 <div class="col-sm-6 mb-3 mb-sm-0">
 <ul class="list-group list-group-horizontal">
-  <li class="list-group-item"><img class="rounded" src="{{danb.image.url}}" width="100" height="150"/><br><h3><b>{{danb.danord}}</b></h3><br>{{danb.danbe}}</li>
+  <li class="list-group-item"><img class="rounded" src="{{tysb.image.url}}" width="100" height="150"/><br><h3><b>{{tysb.tysord}}</b></h3><br>{{tysb.tysbe}}</li>
   
 </ul>
 </div>
 {% endfor %}
 </div>
-
 {% endblock letter %}

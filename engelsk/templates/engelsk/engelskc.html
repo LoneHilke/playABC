@@ -1,18 +1,17 @@
-{% extends 'dansk/base.html' %}
-{% block letter %}
+{% extends 'engelsk/base.html' %}
+{% block ord %}
 <br>
 <h1><font color=blue>C - c</font></h1>
 <h4>C er det tredje (3.) bogstav i alfabetet. Det er den anden konsonant</h4>
 <br>
 <div class="row">
-{% for danc in danc %}
+{% for engc in engc %}
 <div class="col-sm-6 mb-3 mb-sm-0">
 <ul class="list-group list-group-horizontal">
-  <li class="list-group-item"><img class="rounded" src="{{danc.image.url}}" width="100" height="150"/><br><h3><b>{{danc.danord}}</b></h3><br>{{danc.danbe}}</li>
+  <li class="list-group-item"><img class="rounded" src="{{engc.image.url}}" width="100" height="150"/><br><h3><b>{{engc.engord}}</b></h3><br>{{engc.engbe}}</li>
   
 </ul>
 </div>
 {% endfor %}
 </div>
-
-{% endblock letter %}
+{% endblock ord %}

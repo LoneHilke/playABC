@@ -1,0 +1,47 @@
+{% extends 'forside/base.html' %}
+{% block content %}
+<div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+  <div class="bg-danger p-4">
+    <h5 class="text-body-emphasis h4">Alfabetet</h5>
+    <a class="nav-link" href="{% url 'tyska' %}">A</a>
+    <a class="nav-link" href="{% url 'tyskb' %}">B</a>
+    <a class="nav-link" href="{% url 'tyskc' %}">C</a>
+    <a class="nav-link" href="{% url 'tyskd' %}">D</a>
+    <a class="nav-link" href="{% url 'tyske' %}">E</a>
+    <a class="nav-link" href="{% url 'tyskf' %}">F</a>
+    <a class="nav-link" href="{% url 'tyskg' %}">G</a>
+    <a class="nav-link" href="{% url 'tyskh' %}">H</a>
+    <a class="nav-link" href="{% url 'tyski' %}">I</a>
+    <a class="nav-link" href="{% url 'tyskj' %}">J</a>
+    <a class="nav-link" href="{% url 'tyskk' %}">K</a>
+    <a class="nav-link" href="{% url 'tyskl' %}">L</a>
+    <a class="nav-link" href="{% url 'tyskm' %}">M</a>
+    <a class="nav-link" href="{% url 'tyskn' %}">N</a>
+    <a class="nav-link" href="{% url 'tysko' %}">O</a>
+    <a class="nav-link" href="{% url 'tyskp' %}">P</a>
+    <a class="nav-link" href="{% url 'tyskq' %}">Q</a>
+    <a class="nav-link" href="{% url 'tyskr' %}">R</a>
+    <a class="nav-link" href="{% url 'tysks' %}">S</a>
+    <a class="nav-link" href="{% url 'tyskt' %}">T</a>
+    <a class="nav-link" href="{% url 'tysku' %}">U</a>
+    <a class="nav-link" href="{% url 'tyskv' %}">V</a>
+    <a class="nav-link" href="{% url 'tyskw' %}">W</a>
+    <a class="nav-link" href="{% url 'tyskx' %}">X</a>
+    <a class="nav-link" href="{% url 'tysky' %}">Y</a>
+    <a class="nav-link" href="{% url 'tyskz' %}">Z</a>
+    
+    <span class="text-body-secondary"></span>
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-success">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>Indhold
+    </button>
+  </div>
+</nav>
+
+<h1></h1>
+{% block letter %}
+{% endblock letter %}
+{% endblock content %}

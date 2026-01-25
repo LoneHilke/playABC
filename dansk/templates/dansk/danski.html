@@ -1,0 +1,18 @@
+{% extends 'dansk/base.html' %}
+{% block letter %}
+<br>
+<h1><font color=red>I - i</font></h1>
+<h4>I er det niende (9.) bogstav i alfabetet. Det er den tredje vokal</h4>
+<br>
+<div class="row">
+{% for dani in dani %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{dani.image.url}}" width="100" height="150"/><br><h3><b>{{dani.danord}}</b></h3><br>{{dani.danbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+
+{% endblock letter %}

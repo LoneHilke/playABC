@@ -1,0 +1,18 @@
+{% extends 'dansk/base.html' %}
+{% block letter %}
+
+<h1><font color=blue>N - n</font></h1>
+<h4>N er det fjortende (14.) bogstav i alfabetet. Det er den elfte konsonant</h4>
+<br>
+<div class="row">
+{% for dann in dann %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{dann.image.url}}" width="100" height="150"/><br><h3><b>{{dann.danord}}</b></h3><br>{{dann.danbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+
+{% endblock letter %}

@@ -6,301 +6,301 @@ import random
 
 class Base(View):
     def get(self, request, *args, **kwargs):
-        a = Alfabet.objects.filter(bogstav__bogstav__contains='A')
-        b = Alfabet.objects.filter(bogstav__bogstav__contains='B')
-        c = Alfabet.objects.filter(bogstav__bogstav__contains='C')
-        d = Alfabet.objects.filter(bogstav__bogstav__contains='D')
-        e = Alfabet.objects.filter(bogstav__bogstav__contains='E')
-        f = Alfabet.objects.filter(bogstav__bogstav__contains='F')
-        g = Alfabet.objects.filter(bogstav__bogstav__contains='G')
-        h = Alfabet.objects.filter(bogstav__bogstav__contains='H')
-        i = Alfabet.objects.filter(bogstav__bogstav__contains='I')
-        j = Alfabet.objects.filter(bogstav__bogstav__contains='J')
-        k = Alfabet.objects.filter(bogstav__bogstav__contains='K')
-        l = Alfabet.objects.filter(bogstav__bogstav__contains='L')
-        m = Alfabet.objects.filter(bogstav__bogstav__contains='M')
-        n = Alfabet.objects.filter(bogstav__bogstav__contains='N')
-        o = Alfabet.objects.filter(bogstav__bogstav__contains='O')
-        p = Alfabet.objects.filter(bogstav__bogstav__contains='P')
-        q = Alfabet.objects.filter(bogstav__bogstav__contains='Q')
-        r = Alfabet.objects.filter(bogstav__bogstav__contains='R')
-        s = Alfabet.objects.filter(bogstav__bogstav__contains='S')
-        t = Alfabet.objects.filter(bogstav__bogstav__contains='T')
-        u = Alfabet.objects.filter(bogstav__bogstav__contains='U')
-        v = Alfabet.objects.filter(bogstav__bogstav__contains='V')
-        w = Alfabet.objects.filter(bogstav__bogstav__contains='W')
-        x = Alfabet.objects.filter(bogstav__bogstav__contains='X')
-        y = Alfabet.objects.filter(bogstav__bogstav__contains='Y')
-        z = Alfabet.objects.filter(bogstav__bogstav__contains='Z')
-        æ = Alfabet.objects.filter(bogstav__bogstav__contains='Æ')
-        ø = Alfabet.objects.filter(bogstav__bogstav__contains='Ø')
-        å = Alfabet.objects.filter(bogstav__bogstav__contains='Å')
+        dana = Alfabet.objects.filter(bogstav__bogstav__contains='danA')
+        danb = Alfabet.objects.filter(bogstav__bogstav__contains='danB')
+        danc = Alfabet.objects.filter(bogstav__bogstav__contains='danC')
+        dand = Alfabet.objects.filter(bogstav__bogstav__contains='danD')
+        dane = Alfabet.objects.filter(bogstav__bogstav__contains='danE')
+        danf = Alfabet.objects.filter(bogstav__bogstav__contains='danF')
+        dang = Alfabet.objects.filter(bogstav__bogstav__contains='danG')
+        danh = Alfabet.objects.filter(bogstav__bogstav__contains='danH')
+        dani = Alfabet.objects.filter(bogstav__bogstav__contains='danI')
+        danj = Alfabet.objects.filter(bogstav__bogstav__contains='danJ')
+        dank = Alfabet.objects.filter(bogstav__bogstav__contains='danK')
+        danl = Alfabet.objects.filter(bogstav__bogstav__contains='danL')
+        danm = Alfabet.objects.filter(bogstav__bogstav__contains='danM')
+        dann = Alfabet.objects.filter(bogstav__bogstav__contains='danN')
+        dano = Alfabet.objects.filter(bogstav__bogstav__contains='danO')
+        danp = Alfabet.objects.filter(bogstav__bogstav__contains='danP')
+        danq = Alfabet.objects.filter(bogstav__bogstav__contains='danQ')
+        danr = Alfabet.objects.filter(bogstav__bogstav__contains='danR')
+        dans = Alfabet.objects.filter(bogstav__bogstav__contains='danS')
+        dant = Alfabet.objects.filter(bogstav__bogstav__contains='danT')
+        danu = Alfabet.objects.filter(bogstav__bogstav__contains='danU')
+        danv = Alfabet.objects.filter(bogstav__bogstav__contains='danV')
+        danw = Alfabet.objects.filter(bogstav__bogstav__contains='danW')
+        danx = Alfabet.objects.filter(bogstav__bogstav__contains='danX')
+        dany = Alfabet.objects.filter(bogstav__bogstav__contains='danY')
+        danz = Alfabet.objects.filter(bogstav__bogstav__contains='danZ')
+        danæ = Alfabet.objects.filter(bogstav__bogstav__contains='danÆ')
+        danø = Alfabet.objects.filter(bogstav__bogstav__contains='danØ')
+        danå = Alfabet.objects.filter(bogstav__bogstav__contains='danÅ')
         
         context = {
-            'a': a,
-            'b': b,
-            'c': c,
-            'd': d,
-            'e': e,
-            'f': f,
-            'g': g,
-            'h': h,
-            'i': i,
-            'j': j,
-            'k': k,
-            'l': l,
-            'm': m,
-            'n': n,
-            'o': o,
-            'p': p,
-            'q': q,
-            'r': r,
-            's': s,
-            't': t,
-            'u': u,
-            'v': v,
-            'w': w,
-            'x': x,
-            'y': y,
-            'z': z,
-            'æ': æ,
-            'ø': ø,
-            'å': å,
+            'dana': dana,
+            'danb': danb,
+            'danc': danc,
+            'dand': dand,
+            'dane': dane,
+            'danf': danf,
+            'dang': dang,
+            'danh': danh,
+            'dani': dani,
+            'danj': danj,
+            'dank': dank,
+            'danl': danl,
+            'danm': danm,
+            'dann': dann,
+            'dano': dano,
+            'danp': danp,
+            'danq': danq,
+            'danr': danr,
+            'dans': dans,
+            'dant': dant,
+            'danu': danu,
+            'danv': danv,
+            'danw': danw,
+            'danx': danx,
+            'dany': dany,
+            'danz': danz,
+            'danæ': danæ,
+            'danø': danø,
+            'danå': danå,
             
         }
         return render(request, 'dansk/info.html', context)
 
 class AView(View):
     def get(self, request, *args, **kwargs):
-        a = Alfabet.objects.filter(bogstav__bogstav__contains = 'A')
+        dana = Alfabet.objects.filter(bogstav__bogstav__contains = 'danA')
         context = {
-            'a': a
+            'dana': dana
         }
         
         return render(request, 'dansk/danska.html',context) 
     
 class BView(View):
     def get(self, request, *args, **kwargs):
-        b = Alfabet.objects.filter(bogstav__bogstav__contains='B')
+        danb = Alfabet.objects.filter(bogstav__bogstav__contains='danB')
        
         context = {
-            'b': b
+            'danb': danb
         }
         return render(request, 'dansk/danskb.html', context)
 
 class CView(View):
     def get(self, request, *args, **kwargs):
-        c = Alfabet.objects.filter(bogstav__bogstav__contains='C')
+        danc = Alfabet.objects.filter(bogstav__bogstav__contains='danC')
         context = {
-            'c': c
+            'danc': danc
         }
         return render(request, 'dansk/danskc.html', context)
 
 class DView(View):
     def get(self, request, *args, **kwargs):
-        d = Alfabet.objects.filter(bogstav__bogstav__contains='D')
+        dand = Alfabet.objects.filter(bogstav__bogstav__contains='danD')
         context = {
-            'd': d
+            'dand': dand
         }
         return render(request, 'dansk/danskd.html', context)
 
 class EView(View):
     def get(self, request, *args, **kwargs):
-        e = Alfabet.objects.filter(bogstav__bogstav__contains='E')
+        dane = Alfabet.objects.filter(bogstav__bogstav__contains='danE')
         context = {
-            'e': e
+            'dane': dane
         }
         return render(request, 'dansk/danske.html', context)
     
 class FView(View):
     def get(self, request, *args, **kwargs):
-        f = Alfabet.objects.filter(bogstav__bogstav__contains='F')
+        danf = Alfabet.objects.filter(bogstav__bogstav__contains='danF')
         context = {
-            'f': f
+            'danf': danf
         }
         return render(request, 'dansk/danskf.html', context)
     
 class GView(View):
     def get(self, request, *args, **kwargs):
-        g = Alfabet.objects.filter(bogstav__bogstav__contains='G')
+        dang = Alfabet.objects.filter(bogstav__bogstav__contains='danG')
         context = {
-            'g': g
+            'dang': dang
         }
         return render(request, 'dansk/danskg.html', context)
     
 class HView(View):
     def get(self, request, *args, **kwargs):
-        h = Alfabet.objects.filter(bogstav__bogstav__contains='H')
+        danh = Alfabet.objects.filter(bogstav__bogstav__contains='danH')
         context = {
-            'h': h
+            'danh': danh
         }
         return render(request, 'dansk/danskh.html', context)
     
 class IView(View):
     def get(self, request, *args, **kwargs):
-        i = Alfabet.objects.filter(bogstav__bogstav__contains='I')
+        dani = Alfabet.objects.filter(bogstav__bogstav__contains='danI')
         context = {
-            'i': i
+            'dani': dani
         }
         return render(request, 'dansk/danski.html', context)
     
 class JView(View):
     def get(self, request, *args, **kwargs):
-        j = Alfabet.objects.filter(bogstav__bogstav__contains='J')
+        danj = Alfabet.objects.filter(bogstav__bogstav__contains='danJ')
         context = {
-            'j': j
+            'danj': danj
         }
         return render(request, 'dansk/danskj.html', context)
     
 class KView(View):
     def get(self, request, *args, **kwargs):
-        k = Alfabet.objects.filter(bogstav__bogstav__contains='K')
+        dank = Alfabet.objects.filter(bogstav__bogstav__contains='danK')
         context = {
-            'k': k
+            'dank': dank
         }
         return render(request, 'dansk/danskk.html', context)
 
 class LView(View):
     def get(self, request, *args, **kwargs):
-        l = Alfabet.objects.filter(bogstav__bogstav__contains='L')
+        danl = Alfabet.objects.filter(bogstav__bogstav__contains='danL')
         context = {
-            'l': l
+            'danl': danl
         }
         return render(request, 'dansk/danskl.html', context)
     
 class MView(View):
     def get(self, request, *args, **kwargs):
-        m = Alfabet.objects.filter(bogstav__bogstav__contains='M')
+        danm = Alfabet.objects.filter(bogstav__bogstav__contains='danM')
         context = {
-            'm': m
+            'danm': danm
         }
         return render(request, 'dansk/danskm.html', context)
     
 class NView(View):
     def get(self, request, *args, **kwargs):
-        n = Alfabet.objects.filter(bogstav__bogstav__contains='N')
+        dann = Alfabet.objects.filter(bogstav__bogstav__contains='danN')
         context = {
-            'n': n
+            'dann': dann
         }
         return render(request, 'dansk/danskn.html', context)
     
 class OView(View):
     def get(self, request, *args, **kwargs):
-        o = Alfabet.objects.filter(bogstav__bogstav__contains='O')
+        dano = Alfabet.objects.filter(bogstav__bogstav__contains='danO')
         context = {
-            'o': o
+            'dano': dano
         }
         return render(request, 'dansk/dansko.html', context)
     
 class PView(View):
     def get(self, request, *args, **kwargs):
-        p = Alfabet.objects.filter(bogstav__bogstav__contains='P')
+        danp = Alfabet.objects.filter(bogstav__bogstav__contains='danP')
         context = {
-            'p': p
+            'danp': danp
         }
         return render(request, 'dansk/danskp.html', context)
     
 class QView(View):
     def get(self, request, *args, **kwargs):
-        q = Alfabet.objects.filter(bogstav__bogstav__contains='Q')
+        danq = Alfabet.objects.filter(bogstav__bogstav__contains='danQ')
         context = {
-            'q': q
+            'danq': danq
         }
         return render(request, 'dansk/danskq.html', context)
     
 class RView(View):
     def get(self, request, *args, **kwargs):
-        r = Alfabet.objects.filter(bogstav__bogstav__contains='R')
+        danr = Alfabet.objects.filter(bogstav__bogstav__contains='danR')
         context = {
-            'r': r
+            'danr': danr
         }
         return render(request, 'dansk/danskr.html', context)
     
 class SView(View):
     def get(self, request, *args, **kwargs):
-        s = Alfabet.objects.filter(bogstav__bogstav__contains='S')
+        dans = Alfabet.objects.filter(bogstav__bogstav__contains='danS')
         context = {
-            's': s
+            'dans': dans
         }
         return render(request, 'dansk/dansks.html', context)
     
 class TView(View):
     def get(self, request, *args, **kwargs):
-        t = Alfabet.objects.filter(bogstav__bogstav__contains='T')
+        dant = Alfabet.objects.filter(bogstav__bogstav__contains='danT')
         context = {
-            't': t
+            'dant': dant
         }
         return render(request, 'dansk/danskt.html', context)
     
 class UView(View):
     def get(self, request, *args, **kwargs):
-        u = Alfabet.objects.filter(bogstav__bogstav__contains='U')
+        danu = Alfabet.objects.filter(bogstav__bogstav__contains='danU')
         context = {
-            'u': u
+            'danu': danu
         }
         return render(request, 'dansk/dansku.html', context)
     
 class VView(View):
     def get(self, request, *args, **kwargs):
-        v = Alfabet.objects.filter(bogstav__bogstav__contains='V')
+        danv = Alfabet.objects.filter(bogstav__bogstav__contains='danV')
         context = {
-            'v': v
+            'danv': danv
         }
         return render(request, 'dansk/danskv.html', context)
     
 class WView(View):
     def get(self, request, *args, **kwargs):
-        w = Alfabet.objects.filter(bogstav__bogstav__contains='W')
+        danw = Alfabet.objects.filter(bogstav__bogstav__contains='danW')
         context = {
-            'w': w
+            'danw': danw
         }
         return render(request, 'dansk/danskw.html', context)
     
 class XView(View):
     def get(self, request, *args, **kwargs):
-        x = Alfabet.objects.filter(bogstav__bogstav__contains='X')
+        danx = Alfabet.objects.filter(bogstav__bogstav__contains='danX')
         context = {
-            'x': x
+            'danx': danx
         }
         return render(request, 'dansk/danskx.html', context)
     
 class YView(View):
     def get(self, request, *args, **kwargs):
-        y = Alfabet.objects.filter(bogstav__bogstav__contains='Y')
+        dany = Alfabet.objects.filter(bogstav__bogstav__contains='danY')
         context = {
-            'y': y
+            'dany': dany
         }
         return render(request, 'dansk/dansky.html', context)
     
 class ZView(View):
     def get(self, request, *args, **kwargs):
-        z = Alfabet.objects.filter(bogstav__bogstav__contains='Z')
+        danz = Alfabet.objects.filter(bogstav__bogstav__contains='danZ')
         context = {
-            'z': z
+            'danz': danz
         }
         return render(request, 'dansk/danskz.html', context)
     
 class ÆView(View):
     def get(self, request, *args, **kwargs):
-        æ = Alfabet.objects.filter(bogstav__bogstav__contains='Æ')
+        danæ = Alfabet.objects.filter(bogstav__bogstav__contains='danÆ')
         context = {
-            'æ': æ
+            'danæ': danæ
         }
         return render(request, 'dansk/danskæ.html', context)
     
 class ØView(View):
     def get(self, request, *args, **kwargs):
-        ø = Alfabet.objects.filter(bogstav__bogstav__contains='Ø')
+        danø = Alfabet.objects.filter(bogstav__bogstav__contains='danØ')
         context = {
-            'ø': ø
+            'danø': danø
         }
         return render(request, 'dansk/danskø.html', context)
     
 class ÅView(View):
     def get(self, request, *args, **kwargs):
-        å = Alfabet.objects.filter(bogstav__bogstav__contains='Å')
+        danå = Alfabet.objects.filter(bogstav__bogstav__contains='danÅ')
         context = {
-            'å': å
+            'danå': danå
         }
         return render(request, 'dansk/danskå.html', context)
     

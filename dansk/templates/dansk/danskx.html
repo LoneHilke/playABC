@@ -1,0 +1,19 @@
+{% extends 'dansk/base.html' %}
+{% block letter %}
+
+<h1><font color=blue>X - x</font></h1>
+<h4>X er det fireogtyvende (24.) bogstav i alfabetet. Det er den nittende konsonant</h4>
+<h4>X er kun brugt få gange i den danske ordbog</h4>
+<br>
+<div class="row">
+{% for danx in danx %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{danx.image.url}}" width="100" height="150"/><br><h3><b>{{danx.danord}}</b></h3><br>{{danx.danbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+
+{% endblock letter %}

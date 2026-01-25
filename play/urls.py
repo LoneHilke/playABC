@@ -24,4 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("",include("forside.urls")),
     path("dansk/", include("dansk.urls")),
+    path("tysk/", include("tysk.urls")),
+    path("engelsk/", include("engelsk.urls")),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

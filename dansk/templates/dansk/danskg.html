@@ -1,0 +1,18 @@
+{% extends 'dansk/base.html' %}
+{% block letter %}
+<br>
+<h1><font color=blue>G - g</font></h1>
+<h4>G er det syvende (7.) bogstav i alfabetet. Det er den femte konsonant</h4>
+<br>
+<div class="row">
+{% for dang in dang %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{dang.image.url}}" width="100" height="150"/><br><h3><b>{{dang.danord}}</b></h3><br>{{dang.danbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+
+{% endblock letter %}

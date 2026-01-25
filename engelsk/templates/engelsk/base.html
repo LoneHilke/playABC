@@ -1,0 +1,76 @@
+{% extends 'forside/base.html' %}
+{% block content %}
+<head>
+<nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Start</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      Alfabetet<span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Indhold</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Alfabetet
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'engelska' %}">A</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskb' %}">B</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskc' %}">C</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskd' %}">D</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelske' %}">E</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskf' %}">F</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskg' %}">G</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskh' %}">H</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelski' %}">I</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskj' %}">J</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskk' %}">K</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskl' %}">L</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskm' %}">M</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskn' %}">N</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelsko' %}">O</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskp' %}">P</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskq' %}">Q</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskr' %}">R</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelsks' %}">S</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskt' %}">T</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelsku' %}">U</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskv' %}">V</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskw' %}">W</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskx' %}">X</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelsky' %}">Y</a></li>
+              <li><a class="dropdown-item" href="{% url 'engelskz' %}">Z</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Tilføj</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit"></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+<h1></h1>
+</head>
+<body>
+{% block ord %}
+
+{% endblock ord %}
+</body>
+{% endblock content %}

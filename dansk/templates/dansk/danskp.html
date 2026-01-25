@@ -1,0 +1,18 @@
+{% extends 'dansk/base.html' %}
+{% block letter %}
+
+<h1><font color=blue>P - p</font></h1>
+<h4>P er det sekstende (16.) bogstav i alfabetet. Det er den tolvte konsonant</h4>
+<br>
+<div class="row">
+{% for danp in danp %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{danp.image.url}}" width="100" height="150"/><br><h3><b>{{danp.danord}}</b></h3><br>{{danp.danbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+
+{% endblock letter %}

@@ -1,0 +1,18 @@
+{% extends 'dansk/base.html' %}
+{% block letter %}
+<br>
+<h1><font color=blue>F - f</font></h1>
+<h4>F er det sjete (6.) bogstav i alfabetet. Det er den fjerde konsonant</h4>
+<br>
+<div class="row">
+{% for danf in danf %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{danf.image.url}}" width="100" height="150"/><br><h3><b>{{danf.danord}}</b></h3><br>{{danf.danbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+
+{% endblock letter %}
