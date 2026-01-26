@@ -1,0 +1,16 @@
+{% extends 'tysk/base.html' %}
+{% block letter %}
+<h1><font color=blue>W - w</font></h1>
+<h4>W er det treogtyvende (23.) bogstav i alfabetet. Det er den attende konsonant</h4>
+<br>
+<div class="row">
+{% for tysw in tysw %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{tysw.image.url}}" width="100" height="150"/><br><h3><b>{{tysw.tysord}}</b></h3><br>{{tysw.tysbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+{% endblock letter %}

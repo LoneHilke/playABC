@@ -1,0 +1,16 @@
+{% extends 'tysk/base.html' %}
+{% block letter %}
+<h1><font color=blue>V - v</font></h1>
+<h4>V er det toogtyvende (22.) bogstav i alfabetet. Det er den syttende konsonant</h4>
+<br>
+<div class="row">
+{% for tysv in tysv %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{tysv.image.url}}" width="100" height="150"/><br><h3><b>{{tysv.tysord}}</b></h3><br>{{tysv.tysbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+{% endblock letter %}

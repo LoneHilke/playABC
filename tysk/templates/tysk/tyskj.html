@@ -1,0 +1,16 @@
+{% extends 'tysk/base.html' %}
+{% block letter %}
+<h1><font color=blue>J - j</font></h1>
+<h4>J er det tiende (10.) bogstav i alfabetet. Det er den syvende konsonant</h4>
+<br>
+<div class="row">
+{% for tysj in tysj %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{tysj.image.url}}" width="100" height="150"/><br><h3><b>{{tysj.ord}}</b></h3><br>{{tysj.tysbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+{% endblock letter %}

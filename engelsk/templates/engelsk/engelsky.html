@@ -1,0 +1,20 @@
+{% extends 'engelsk/base.html' %}
+{% block ord %}
+<br>
+<h1><font color=blue>Y - y</font></h1>
+<h4>Y er det femogtyvende (25.) bogstav i alfabetet. Y kan jo være både vokal og konsonant.<br>
+    Som vokal er Y den sjete vokal.<br>
+Som konsonant er Y den tyvende konsonant.<br>
+Men vi tæller den som vokal her.</h4>
+<br>
+<div class="row">
+{% for engy in engy %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{engy.image.url}}" width="100" height="150"/><br><h3><b>{{engy.engord}}</b></h3><br>{{engy.engbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+{% endblock ord %}

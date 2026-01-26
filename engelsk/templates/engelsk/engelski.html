@@ -1,0 +1,17 @@
+{% extends 'engelsk/base.html' %}
+{% block ord %}
+<br>
+<h1><font color=red>I - i</font></h1>
+<h4>D er det niende (9.) bogstav i alfabetet. Det er den tredje vokal</h4>
+<br>
+<div class="row">
+{% for engi in engi %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{engi.image.url}}" width="100" height="150"/><br><h3><b>{{engi.engord}}</b></h3><br>{{engi.engbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+{% endblock ord %}

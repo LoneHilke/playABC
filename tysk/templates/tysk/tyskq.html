@@ -1,0 +1,16 @@
+{% extends 'tysk/base.html' %}
+{% block letter %}
+<h1><font color=blue>Q - q</font></h1>
+<h4>Q er det syttende (17.) bogstav i alfabetet. Det er den trettende konsonant</h4>
+<br>
+<div class="row">
+{% for tysq in tysq %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{tysq.image.url}}" width="100" height="150"/><br><h3><b>{{tysq.tysord}}</b></h3><br>{{tysq.tysbe}}</li>
+  
+</ul>q
+</div>
+{% endfor %}
+</div>
+{% endblock letter %}

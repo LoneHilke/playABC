@@ -19,19 +19,19 @@ class Base(View):
         engk = Alfabet.objects.filter(bogstav__bogstav__contains='engk')
         engl = Alfabet.objects.filter(bogstav__bogstav__contains='engl')
         engm = Alfabet.objects.filter(bogstav__bogstav__contains='engm')
-        engn = Alfabet.objects.filter(bogstav__bogstav__contains='N')
-        engo = Alfabet.objects.filter(bogstav__bogstav__contains='O')
-        engp = Alfabet.objects.filter(bogstav__bogstav__contains='P')
-        engq = Alfabet.objects.filter(bogstav__bogstav__contains='Q')
-        engr = Alfabet.objects.filter(bogstav__bogstav__contains='R')
-        engs = Alfabet.objects.filter(bogstav__bogstav__contains='S')
-        engt = Alfabet.objects.filter(bogstav__bogstav__contains='T')
-        engu = Alfabet.objects.filter(bogstav__bogstav__contains='U')
-        engv = Alfabet.objects.filter(bogstav__bogstav__contains='V')
-        engw = Alfabet.objects.filter(bogstav__bogstav__contains='W')
-        engx = Alfabet.objects.filter(bogstav__bogstav__contains='X')
-        engy = Alfabet.objects.filter(bogstav__bogstav__contains='Y')
-        engz = Alfabet.objects.filter(bogstav__bogstav__contains='Z')
+        engn = Alfabet.objects.filter(bogstav__bogstav__contains='engn')
+        engo = Alfabet.objects.filter(bogstav__bogstav__contains='engo')
+        engp = Alfabet.objects.filter(bogstav__bogstav__contains='engp')
+        engq = Alfabet.objects.filter(bogstav__bogstav__contains='engq')
+        engr = Alfabet.objects.filter(bogstav__bogstav__contains='engr')
+        engs = Alfabet.objects.filter(bogstav__bogstav__contains='engs')
+        engt = Alfabet.objects.filter(bogstav__bogstav__contains='engt')
+        engu = Alfabet.objects.filter(bogstav__bogstav__contains='engu')
+        engv = Alfabet.objects.filter(bogstav__bogstav__contains='engv')
+        engw = Alfabet.objects.filter(bogstav__bogstav__contains='engw')
+        engx = Alfabet.objects.filter(bogstav__bogstav__contains='engx')
+        engy = Alfabet.objects.filter(bogstav__bogstav__contains='engy')
+        engz = Alfabet.objects.filter(bogstav__bogstav__contains='engz')
        
         
         context = {
@@ -45,22 +45,22 @@ class Base(View):
             'engh': engh,
             'engi': engi,
             'engj': engj,
-            'engk': engk,
+            'engk': engk,  
             'engl': engl,
             'engm': engm,
-            'n': engn,
-            'o': engo,
-            'p': engp,
-            'q': engq,
-            'r': engr,
-            's': engs,
-            't': engt,
-            'u': engu,
-            'v': engv,
-            'w': engw,
-            'x': engx,
-            'y': engy,
-            'z': engz,
+            'engn': engn,
+            'engo': engo,
+            'engp': engp,
+            'engq': engq,
+            'engr': engr,
+            'engs': engs,
+            'engt': engt,
+            'engu': engu,
+            'engv': engv,
+            'engw': engw,
+            'engx': engx,
+            'engy': engy,
+            'engz': engz,
                         
         }
         return render(request, 'engelsk/info.html')

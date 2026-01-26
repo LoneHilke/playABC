@@ -6,61 +6,61 @@ import random
 
 class Base(View):
     def get(self, request, *args, **kwargs):
-        tysa = Alfabet.objects.filter(bogstav__bogstav__contains='A')
-        tysb = Alfabet.objects.filter(bogstav__bogstav__contains='B')
-        c = Alfabet.objects.filter(bogstav__bogstav__contains='C')
-        d = Alfabet.objects.filter(bogstav__bogstav__contains='D')
-        e = Alfabet.objects.filter(bogstav__bogstav__contains='E')
-        f = Alfabet.objects.filter(bogstav__bogstav__contains='F')
-        g = Alfabet.objects.filter(bogstav__bogstav__contains='G')
-        h = Alfabet.objects.filter(bogstav__bogstav__contains='H')
-        i = Alfabet.objects.filter(bogstav__bogstav__contains='I')
-        j = Alfabet.objects.filter(bogstav__bogstav__contains='J')
-        k = Alfabet.objects.filter(bogstav__bogstav__contains='K')
-        l = Alfabet.objects.filter(bogstav__bogstav__contains='L')
-        m = Alfabet.objects.filter(bogstav__bogstav__contains='M')
-        n = Alfabet.objects.filter(bogstav__bogstav__contains='N')
-        o = Alfabet.objects.filter(bogstav__bogstav__contains='O')
-        p = Alfabet.objects.filter(bogstav__bogstav__contains='P')
-        q = Alfabet.objects.filter(bogstav__bogstav__contains='Q')
-        r = Alfabet.objects.filter(bogstav__bogstav__contains='R')
-        s = Alfabet.objects.filter(bogstav__bogstav__contains='S')
-        t = Alfabet.objects.filter(bogstav__bogstav__contains='T')
-        u = Alfabet.objects.filter(bogstav__bogstav__contains='U')
-        v = Alfabet.objects.filter(bogstav__bogstav__contains='V')
-        w = Alfabet.objects.filter(bogstav__bogstav__contains='W')
-        x = Alfabet.objects.filter(bogstav__bogstav__contains='X')
-        y = Alfabet.objects.filter(bogstav__bogstav__contains='Y')
-        z = Alfabet.objects.filter(bogstav__bogstav__contains='Z')
+        tysa = Alfabet.objects.filter(bogstav__bogstav__contains='tysA')
+        tysb = Alfabet.objects.filter(bogstav__bogstav__contains='tysB')
+        tysc = Alfabet.objects.filter(bogstav__bogstav__contains='tysC')
+        tysd = Alfabet.objects.filter(bogstav__bogstav__contains='tysD')
+        tyse = Alfabet.objects.filter(bogstav__bogstav__contains='tysE')
+        tysf = Alfabet.objects.filter(bogstav__bogstav__contains='tysF')  
+        tysg = Alfabet.objects.filter(bogstav__bogstav__contains='tysG')
+        tysh = Alfabet.objects.filter(bogstav__bogstav__contains='tysH')
+        tysi = Alfabet.objects.filter(bogstav__bogstav__contains='tysI')
+        tysj = Alfabet.objects.filter(bogstav__bogstav__contains='tysJ')
+        tysk = Alfabet.objects.filter(bogstav__bogstav__contains='tysK')
+        tysl = Alfabet.objects.filter(bogstav__bogstav__contains='tysL')
+        tysm = Alfabet.objects.filter(bogstav__bogstav__contains='tysM')
+        tysn = Alfabet.objects.filter(bogstav__bogstav__contains='tysN')
+        tyso = Alfabet.objects.filter(bogstav__bogstav__contains='tysO')
+        tysp = Alfabet.objects.filter(bogstav__bogstav__contains='tysP')
+        tysq = Alfabet.objects.filter(bogstav__bogstav__contains='tysQ')
+        tysr = Alfabet.objects.filter(bogstav__bogstav__contains='tysR')
+        tyss = Alfabet.objects.filter(bogstav__bogstav__contains='tysS')
+        tyst = Alfabet.objects.filter(bogstav__bogstav__contains='tysT')
+        tysu = Alfabet.objects.filter(bogstav__bogstav__contains='tysU')
+        tysv = Alfabet.objects.filter(bogstav__bogstav__contains='tysV')
+        tysw = Alfabet.objects.filter(bogstav__bogstav__contains='tysW')
+        tysx = Alfabet.objects.filter(bogstav__bogstav__contains='tysX')
+        tysy = Alfabet.objects.filter(bogstav__bogstav__contains='tysY')
+        tysz = Alfabet.objects.filter(bogstav__bogstav__contains='tysZ')
         
         
         context = {
-            'a': tysa,
-            'b': tysb,
-            'c': c,
-            'd': d,
-            'e': e,
-            'f': f,
-            'g': g,
-            'h': h,
-            'i': i,
-            'j': j,
-            'k': k,
-            'l': l,
-            'm': m,
-            'n': n,
-            'o': o,
-            'p': p,
-            'q': q,
-            'r': r,
-            's': s,
-            't': t,
-            'u': u,
-            'v': v,
-            'w': w,
-            'x': x,
-            'y': y,
-            'z': z,
+            'tysa': tysa,
+            'tysb': tysb,
+            'tysc': tysc,
+            'tysd': tysd,
+            'tyse': tyse,
+            'tysf': tysf,
+            'tysg': tysg,
+            'tysh': tysh,
+            'tysi': tysi,
+            'tysj': tysj,
+            'tysk': tysk,
+            'tysl': tysl,
+            'tysm': tysm,
+            'tysn': tysn,
+            'tyso': tyso,
+            'tysp': tysp,
+            'tysq': tysq,
+            'tysr': tysr,
+            'tyss': tyss,
+            'tyst': tyst,
+            'tysu': tysu,
+            'tysv': tysv,
+            'tysw': tysw,
+            'tysx': tysx,
+            'tysy': tysy,
+            'tysz': tysz,
             
             
         }
@@ -68,210 +68,210 @@ class Base(View):
 
 class TyskaView(View):
     def get(self, request, *args, **kwargs):
-        tysa = Alfabet.objects.filter(bogstav__bogstav__contains = 'A')
+        tysa = Alfabet.objects.filter(bogstav__bogstav__contains = 'tysA')
         context = {
-            'a': tysa
+            'tysa': tysa
         }
         
         return render(request, 'tysk/tyska.html',context) 
     
 class TyskbView(View):
     def get(self, request, *args, **kwargs):
-        tysb = Alfabet.objects.filter(bogstav__bogstav__contains='B')
+        tysb = Alfabet.objects.filter(bogstav__bogstav__contains='tysB')
         context = {
-            'b': tysb
+            'tysb': tysb
         }
         return render(request, 'tysk/tyskb.html', context)
     
 class TyskCView(View):
     def get(self, request, *args, **kwargs):
-        c = Alfabet.objects.filter(bogstav__bogstav__contains='C')
+        tysc = Alfabet.objects.filter(bogstav__bogstav__contains='tysC')
         context = {
-            'c': c
+            'tysc': tysc
         }
         return render(request, 'tysk/tyskc.html', context)
     
 class TyskDView(View):
     def get(self, request, *args, **kwargs):
-        d = Alfabet.objects.filter(bogstav__bogstav__contains='D')
+        tysd = Alfabet.objects.filter(bogstav__bogstav__contains='tysD')
         context = {
-            'd': d
+            'tysd': tysd
         }
         return render(request, 'tysk/tyskd.html', context)
     
 class TyskEView(View):
     def get(self, request, *args, **kwargs):
-        e = Alfabet.objects.filter(bogstav__bogstav__contains='E')
+        tyse = Alfabet.objects.filter(bogstav__bogstav__contains='tysE')
         context = {
-            'e': e
+            'tyse': tyse
         }
         return render(request, 'tysk/tyske.html', context)
     
 class TyskFView(View):
     def get(self, request, *args, **kwargs):
-        f = Alfabet.objects.filter(bogstav__bogstav__contains='F')
+        tysf = Alfabet.objects.filter(bogstav__bogstav__contains='tysF')
         context = {
-            'f': f
+            'tysf': tysf
         }
         return render(request, 'tysk/tyskf.html', context)
     
 class TyskGView(View):
     def get(self, request, *args, **kwargs):
-        g = Alfabet.objects.filter(bogstav__bogstav__contains='G')
+        tysg = Alfabet.objects.filter(bogstav__bogstav__contains='tysG')
         context = {
-            'g': g
+            'tysg': tysg
         }
         return render(request, 'tysk/tyskg.html', context)
     
 class TyskHView(View):
     def get(self, request, *args, **kwargs):
-        h = Alfabet.objects.filter(bogstav__bogstav__contains='H')
+        tysh = Alfabet.objects.filter(bogstav__bogstav__contains='tysH')
         context = {
-            'h': h
+            'tysh': tysh
         }
         return render(request, 'tysk/tyskh.html', context)
     
 class TyskIView(View):
     def get(self, request, *args, **kwargs):
-        i = Alfabet.objects.filter(bogstav__bogstav__contains='I')
+        tysi = Alfabet.objects.filter(bogstav__bogstav__contains='tysvI')
         context = {
-            'i': i
+            'tysi': tysi
         }
         return render(request, 'tysk/tyski.html', context)
     
 class TyskJView(View):
     def get(self, request, *args, **kwargs):
-        j = Alfabet.objects.filter(bogstav__bogstav__contains='J')
+        tysj = Alfabet.objects.filter(bogstav__bogstav__contains='tysJ')
         context = {
-            'j': j
+            'tysj': tysj
         }
         return render(request, 'tysk/tyskj.html', context)
     
 class TyskKView(View):
     def get(self, request, *args, **kwargs):
-        k = Alfabet.objects.filter(bogstav__bogstav__contains='K')
+        tysk = Alfabet.objects.filter(bogstav__bogstav__contains='tysK')
         context = {
-            'k': k
+            'tysk': tysk
         }
         return render(request, 'tysk/tyskk.html', context)
     
 class TyskLView(View):
     def get(self, request, *args, **kwargs):
-        l = Alfabet.objects.filter(bogstav__bogstav__contains='L')
+        tysl = Alfabet.objects.filter(bogstav__bogstav__contains='tysL')
         context = {
-            'l': l
+            'tysl': tysl
         }
         return render(request, 'tysk/tyskl.html', context)
     
 class TyskMView(View):
     def get(self, request, *args, **kwargs):
-        m = Alfabet.objects.filter(bogstav__bogstav__contains='M')
+        tysm = Alfabet.objects.filter(bogstav__bogstav__contains='tysM')
         context = {
-            'm': m
+            'tysm': tysm
         }
         return render(request, 'tysk/tyskm.html', context)
     
 class TyskNView(View):
     def get(self, request, *args, **kwargs):
-        n = Alfabet.objects.filter(bogstav__bogstav__contains='N')
+        tysn = Alfabet.objects.filter(bogstav__bogstav__contains='tysN')
         context = {
-            'n': n
+            'tysn': tysn
         }
         return render(request, 'tysk/tyskn.html', context)
     
 class TyskOView(View):
     def get(self, request, *args, **kwargs):
-        o = Alfabet.objects.filter(bogstav__bogstav__contains='O')
+        tyso = Alfabet.objects.filter(bogstav__bogstav__contains='tysO')
         context = {
-            'o': o
+            'tyso': tyso
         }
         return render(request, 'tysk/tysko.html', context)
     
 class TyskPView(View):
     def get(self, request, *args, **kwargs):
-        p = Alfabet.objects.filter(bogstav__bogstav__contains='P')
+        tysp = Alfabet.objects.filter(bogstav__bogstav__contains='tysP')
         context = {
-            'p': p
+            'tysp': tysp
         }
         return render(request, 'tysk/tyskp.html', context)
     
 class TyskQView(View):
     def get(self, request, *args, **kwargs):
-        q = Alfabet.objects.filter(bogstav__bogstav__contains='Q')
+        tysq = Alfabet.objects.filter(bogstav__bogstav__contains='tysQ')
         context = {
-            'q': q
+            'tysq': tysq
         }
         return render(request, 'tysk/tyskq.html', context)
     
 class TyskRView(View):
     def get(self, request, *args, **kwargs):
-        r = Alfabet.objects.filter(bogstav__bogstav__contains='R')
+        tysr = Alfabet.objects.filter(bogstav__bogstav__contains='tysR')
         context = {
-            'r': r
+            'tysr': tysr
         }
         return render(request, 'tysk/tyskr.html', context)
     
 class TyskSView(View):
     def get(self, request, *args, **kwargs):
-        s = Alfabet.objects.filter(bogstav__bogstav__contains='S')
+        tyss = Alfabet.objects.filter(bogstav__bogstav__contains='tysS')
         context = {
-            's': s
+            'tyss': tyss
         }
         return render(request, 'tysk/tysks.html', context)
     
 class TyskTView(View):
     def get(self, request, *args, **kwargs):
-        t = Alfabet.objects.filter(bogstav__bogstav__contains='T')
+        tyst = Alfabet.objects.filter(bogstav__bogstav__contains='tysT')
         context = {
-            't': t
+            'tyst': tyst
         }
         return render(request, 'tysk/tyskt.html', context)
     
 class TyskUView(View):
     def get(self, request, *args, **kwargs):
-        u = Alfabet.objects.filter(bogstav__bogstav__contains='U')
+        tysu = Alfabet.objects.filter(bogstav__bogstav__contains='tysU')
         context = {
-            'u': u
+            'tysu': tysu
         }
         return render(request, 'tysk/tysku.html', context)
     
 class TyskVView(View):
     def get(self, request, *args, **kwargs):
-        v = Alfabet.objects.filter(bogstav__bogstav__contains='V')
+        tysv = Alfabet.objects.filter(bogstav__bogstav__contains='tysV')
         context = {
-            'v': v
+            'tysv': tysv
         }
         return render(request, 'tysk/tyskv.html', context)
     
 class TyskWView(View):
     def get(self, request, *args, **kwargs):
-        w = Alfabet.objects.filter(bogstav__bogstav__contains='W')
+        tysw = Alfabet.objects.filter(bogstav__bogstav__contains='tysW')
         context = {
-            'w': w
+            'tysw': tysw
         }
         return render(request, 'tysk/tyskw.html', context)
     
 class TyskXView(View):
     def get(self, request, *args, **kwargs):
-        x = Alfabet.objects.filter(bogstav__bogstav__contains='X')
+        tysx = Alfabet.objects.filter(bogstav__bogstav__contains='tysX')
         context = {
-            'x': x
+            'tysx': tysx
         }
         return render(request, 'tyskx.html', context)
     
 class TyskYView(View):
     def get(self, request, *args, **kwargs):
-        y = Alfabet.objects.filter(bogstav__bogstav__contains='Y')
+        tysy = Alfabet.objects.filter(bogstav__bogstav__contains='tysY')
         context = {
-            'y': y
+            'tysy': tysy
         }
         return render(request, 'tysk/tysky.html', context)
 
 class TyskZView(View):
     def get(self, request, *args, **kwargs):
-        z = Alfabet.objects.filter(bogstav__bogstav__contains='Z')
+        tysz = Alfabet.objects.filter(bogstav__bogstav__contains='tysZ')
         context = {
-            'z': z
+            'tysz': tysz
         }
         return render(request, 'tysk/tyskz.html', context)
     

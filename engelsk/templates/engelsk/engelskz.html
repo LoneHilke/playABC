@@ -1,0 +1,17 @@
+{% extends 'engelsk/base.html' %}
+{% block ord %}
+<br>
+<h1><font color=blue>Z - z</font></h1>
+<h4>Z er det seksogtyvende (26.) bogstav i alfabetet. Det er den tyvende konsonant</h4>
+<br>
+<div class="row">
+{% for engz in engz %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{engz.image.url}}" width="100" height="150"/><br><h3><b>{{engz.engord}}</b></h3><br>{{engz.engbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+{% endblock ord %}

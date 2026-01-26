@@ -1,0 +1,18 @@
+{% extends 'tysk/base.html' %}
+{% block letter %}
+
+<h1><font color=blue>D - d</font></h1>
+<h4>D er det fjerde (4.) bogstav i alfabetet. Det er den tredje konsonant</h4>
+<br>
+<div class="row">
+{% for tysd in tysd %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{tysd.image.url}}" width="100" height="150"/><br><h3><b>{{tysd.tysord}}</b></h3><br>{{tysd.tysbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+
+{% endblock letter %}

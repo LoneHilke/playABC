@@ -1,0 +1,17 @@
+{% extends 'engelsk/base.html' %}
+{% block ord %}
+<br>
+<h1><font color=blue>K - k</font></h1>
+<h4>K er det elfte (11.) bogstav i alfabetet. Det er den ottende konsonant</h4>
+<br>
+<div class="row">
+{% for engk in engk %}
+<div class="col-sm-6 mb-3 mb-sm-0">
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item"><img class="rounded" src="{{engk.image.url}}" width="100" height="150"/><br><h3><b>{{engk.engord}}</b></h3><br>{{engk.engbe}}</li>
+  
+</ul>
+</div>
+{% endfor %}
+</div>
+{% endblock ord %}
