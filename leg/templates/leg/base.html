@@ -1,0 +1,32 @@
+{% extends 'forside/base.html' %}
+{% block content %}
+<div class="container text-center">
+  <div class="row align-items-center">
+    <div class="col">
+      <h2><font color = green><u><b>Dansk</b></u></font></h2>
+      <li><a  href="{% url 'gaet' %}">Stavning</a></li>
+      <li><a  href="#">Hvad mangler</a></li>
+      <li><a  href="#">Hvad passer sammen</a></li>
+    </div>
+    <div class="col">
+      <h2><font color = red><u><b>Tysk</b></u></font></h2>
+      <li><a  href="#">Stavning</a></li>
+      <li><a  href="#">Hvad mangler</a></li>
+      <li><a  href="#">Hvad passer sammen</a></li>
+    </div>
+    <div class="col">
+      <h2><font color = blue><u><b>Engelsk</b></u></font></h2>
+      <li><a  href="#">Stavning</a></li>
+      <li><a  href="#">Hvad mangler</a></li>
+      <li><a  href="#">Hvad passer sammen</a></li>
+    </div>
+    <div class="col">
+      <h2><font color = orange><u><b>Tilføj ord</b></u></font></h2>
+      <li><a  href="{% url 'tilføj' %}">Tilføj</a></li>
+    </div>
+  </div>
+</div>
+
+{% block letter %}
+{% endblock letter %}
+{% endblock content %}

@@ -26,4 +26,5 @@ urlpatterns = [
     path("dansk/", include("dansk.urls")),
     path("tysk/", include("tysk.urls")),
     path("engelsk/", include("engelsk.urls")),
+    path("leg/", include("leg.urls")),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
