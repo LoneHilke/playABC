@@ -244,7 +244,7 @@ class GætView(View):
 
         return render(request, "leg/gaet.html", {
             "billeder": billeder,
-            "form": GætForm(),
+            "form1": GætForm(),
             "resultat": None,
             "aktiv_bogstav": None,
         })
@@ -271,6 +271,68 @@ class GætView(View):
         })
 
 
-        
+class Gæt2View(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'leg/gaet2.html')
+
+class GætaView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="dana")
+        dana = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/gæta.html", {
+            "dana": dana,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.danord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.danord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/gæta.html", {
+            "dana": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
 
         
+
+class GætbView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="danb")
+        danb = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/gætb.html", {
+            "danb": danb,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.danord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.danord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/gætb.html", {
+            "danb": nyt_obj,
+            "form1": GætForm(),
+            "resultat": resultat,
+        })
+
+            

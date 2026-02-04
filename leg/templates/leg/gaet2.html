@@ -1,0 +1,28 @@
+{% extends 'leg/base.html' %}
+{% block content %}
+<h1><font color=green><u><b>Stav ordet</b></u></font></h1>
+<br>
+<h3>Vælg det bogstav, hvor du vil stave ordet</h3>
+ <nav class="navbar bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+<a class="nav-link" href="{% url 'gæta' %}"><h1>A</h1></a>   <a class="nav-link" href="{% url 'gætb' %}"><h1> B</h1></a><a class="nav-link" href="#"><h1> C</h1></a>
+
+
+ </div>
+ <div class="container">
+    <a class="navbar-brand" href="/">
+    <a class="nav-link" href="#"><h1>D</h1></a><a class="nav-link" href="#"><h1>E</h1></a>
+    </div>
+     <div class="container">
+    <a class="navbar-brand" href="/">
+<a class="nav-link" href="{% url 'gæta' %}"><h1>F</h1></a>   <a class="nav-link" href="{% url 'gætb' %}"><h1>G</h1></a><a class="nav-link" href="#"><h1> H</h1></a>
+    </div>
+     <div class="container">
+    <a class="navbar-brand" href="/">
+    <a class="nav-link" href="#"><h1>I</h1></a><a class="nav-link" href="#"><h1>J</h1></a>
+    </div>
+</nav>
+
+
+{% endblock content %}
