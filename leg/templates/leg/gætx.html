@@ -1,0 +1,27 @@
+{% extends "leg/base.html" %}
+{% block content %}
+
+<h4>X</h4>
+
+{% if danx %}
+    <img src="{{ danx.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    <label for="gæt-danx">Hvad forestiller billedet?</label>
+    <input type="text" name="gæt" id="gæt-danx">
+    <input type="hidden" name="alfabet_id" value="{{ danx.id }}">
+    <button type="submit">Tjek</button>
+</form>
+
+{% if resultat %}
+    <p><strong>{{ resultat }}</strong></p>
+{% endif %}
+
+<hr>
+
+<a class="btn btn-success" href="{% url "gaet2" %}">Tilbage</a>
+<a class="btn btn-success" href="{% url "gæty" %}">Næste</a>
+
+{% endblock content %}
