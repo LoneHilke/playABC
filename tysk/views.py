@@ -69,6 +69,7 @@ class Base(View):
 class TyskaView(View):
     def get(self, request, *args, **kwargs):
         tysa = Alfabet.objects.filter(bogstav__bogstav__contains = 'tysA')
+        tysa = tysa.order_by("tysord")
         context = {
             'tysa': tysa
         }
@@ -78,6 +79,7 @@ class TyskaView(View):
 class TyskbView(View):
     def get(self, request, *args, **kwargs):
         tysb = Alfabet.objects.filter(bogstav__bogstav__contains='tysB')
+        tysb = tysb.order_by("tysord")
         context = {
             'tysb': tysb
         }
@@ -86,6 +88,7 @@ class TyskbView(View):
 class TyskCView(View):
     def get(self, request, *args, **kwargs):
         tysc = Alfabet.objects.filter(bogstav__bogstav__contains='tysC')
+        tysc = tysc.order_by("tysord")
         context = {
             'tysc': tysc
         }
@@ -94,6 +97,7 @@ class TyskCView(View):
 class TyskDView(View):
     def get(self, request, *args, **kwargs):
         tysd = Alfabet.objects.filter(bogstav__bogstav__contains='tysD')
+        tysd = tysd.order_by("tysord")
         context = {
             'tysd': tysd
         }
@@ -102,6 +106,7 @@ class TyskDView(View):
 class TyskEView(View):
     def get(self, request, *args, **kwargs):
         tyse = Alfabet.objects.filter(bogstav__bogstav__contains='tysE')
+        tyse = tyse.order_by("tysord")
         context = {
             'tyse': tyse
         }
@@ -110,6 +115,7 @@ class TyskEView(View):
 class TyskFView(View):
     def get(self, request, *args, **kwargs):
         tysf = Alfabet.objects.filter(bogstav__bogstav__contains='tysF')
+        tysf = tysf.order_by("tysord")
         context = {
             'tysf': tysf
         }
@@ -118,6 +124,7 @@ class TyskFView(View):
 class TyskGView(View):
     def get(self, request, *args, **kwargs):
         tysg = Alfabet.objects.filter(bogstav__bogstav__contains='tysG')
+        tysg = tysg.order_by("tysord")
         context = {
             'tysg': tysg
         }
@@ -126,6 +133,7 @@ class TyskGView(View):
 class TyskHView(View):
     def get(self, request, *args, **kwargs):
         tysh = Alfabet.objects.filter(bogstav__bogstav__contains='tysH')
+        tysh = tysh.order_by("tysord")
         context = {
             'tysh': tysh
         }
@@ -134,6 +142,7 @@ class TyskHView(View):
 class TyskIView(View):
     def get(self, request, *args, **kwargs):
         tysi = Alfabet.objects.filter(bogstav__bogstav__contains='tysvI')
+        tysi = tysi.order_by("tysord")
         context = {
             'tysi': tysi
         }
@@ -142,6 +151,7 @@ class TyskIView(View):
 class TyskJView(View):
     def get(self, request, *args, **kwargs):
         tysj = Alfabet.objects.filter(bogstav__bogstav__contains='tysJ')
+        tysj = tysj.order_by("tysord")
         context = {
             'tysj': tysj
         }
@@ -150,6 +160,7 @@ class TyskJView(View):
 class TyskKView(View):
     def get(self, request, *args, **kwargs):
         tysk = Alfabet.objects.filter(bogstav__bogstav__contains='tysK')
+        tysk = tysk.order_by("tysord")
         context = {
             'tysk': tysk
         }
@@ -158,6 +169,7 @@ class TyskKView(View):
 class TyskLView(View):
     def get(self, request, *args, **kwargs):
         tysl = Alfabet.objects.filter(bogstav__bogstav__contains='tysL')
+        tysl = tysl.order_by("tysord")
         context = {
             'tysl': tysl
         }
@@ -166,6 +178,7 @@ class TyskLView(View):
 class TyskMView(View):
     def get(self, request, *args, **kwargs):
         tysm = Alfabet.objects.filter(bogstav__bogstav__contains='tysM')
+        tysm = tysm.order_by("tysord")
         context = {
             'tysm': tysm
         }
@@ -174,6 +187,7 @@ class TyskMView(View):
 class TyskNView(View):
     def get(self, request, *args, **kwargs):
         tysn = Alfabet.objects.filter(bogstav__bogstav__contains='tysN')
+        tysn = tysn.order_by("tysord")
         context = {
             'tysn': tysn
         }
@@ -182,6 +196,7 @@ class TyskNView(View):
 class TyskOView(View):
     def get(self, request, *args, **kwargs):
         tyso = Alfabet.objects.filter(bogstav__bogstav__contains='tysO')
+        tyso = tyso.order_by("tysord")
         context = {
             'tyso': tyso
         }
@@ -190,6 +205,7 @@ class TyskOView(View):
 class TyskPView(View):
     def get(self, request, *args, **kwargs):
         tysp = Alfabet.objects.filter(bogstav__bogstav__contains='tysP')
+        tysp = tysp.order_by("tysord")
         context = {
             'tysp': tysp
         }
@@ -198,6 +214,7 @@ class TyskPView(View):
 class TyskQView(View):
     def get(self, request, *args, **kwargs):
         tysq = Alfabet.objects.filter(bogstav__bogstav__contains='tysQ')
+        tysq = tysq.order_by("tysord")
         context = {
             'tysq': tysq
         }
@@ -206,6 +223,7 @@ class TyskQView(View):
 class TyskRView(View):
     def get(self, request, *args, **kwargs):
         tysr = Alfabet.objects.filter(bogstav__bogstav__contains='tysR')
+        tysr = tysr.order_by("tysord")
         context = {
             'tysr': tysr
         }
@@ -214,6 +232,7 @@ class TyskRView(View):
 class TyskSView(View):
     def get(self, request, *args, **kwargs):
         tyss = Alfabet.objects.filter(bogstav__bogstav__contains='tysS')
+        tyss = tyss.order_by("tysord")
         context = {
             'tyss': tyss
         }
@@ -222,6 +241,7 @@ class TyskSView(View):
 class TyskTView(View):
     def get(self, request, *args, **kwargs):
         tyst = Alfabet.objects.filter(bogstav__bogstav__contains='tysT')
+        tyst = tyst.order_by("tysord")
         context = {
             'tyst': tyst
         }
@@ -230,6 +250,7 @@ class TyskTView(View):
 class TyskUView(View):
     def get(self, request, *args, **kwargs):
         tysu = Alfabet.objects.filter(bogstav__bogstav__contains='tysU')
+        tysu = tysu.order_by("tysord")
         context = {
             'tysu': tysu
         }
@@ -238,6 +259,7 @@ class TyskUView(View):
 class TyskVView(View):
     def get(self, request, *args, **kwargs):
         tysv = Alfabet.objects.filter(bogstav__bogstav__contains='tysV')
+        tysv = tysv.order_by("tysord")
         context = {
             'tysv': tysv
         }
@@ -246,6 +268,7 @@ class TyskVView(View):
 class TyskWView(View):
     def get(self, request, *args, **kwargs):
         tysw = Alfabet.objects.filter(bogstav__bogstav__contains='tysW')
+        tysw = tysw.order_by("tysord")
         context = {
             'tysw': tysw
         }
@@ -254,6 +277,7 @@ class TyskWView(View):
 class TyskXView(View):
     def get(self, request, *args, **kwargs):
         tysx = Alfabet.objects.filter(bogstav__bogstav__contains='tysX')
+        tysx = tysx.order_by("tysord")
         context = {
             'tysx': tysx
         }
@@ -262,6 +286,7 @@ class TyskXView(View):
 class TyskYView(View):
     def get(self, request, *args, **kwargs):
         tysy = Alfabet.objects.filter(bogstav__bogstav__contains='tysY')
+        tysy = tysy.order_by("tysord")
         context = {
             'tysy': tysy
         }
@@ -270,6 +295,7 @@ class TyskYView(View):
 class TyskZView(View):
     def get(self, request, *args, **kwargs):
         tysz = Alfabet.objects.filter(bogstav__bogstav__contains='tysZ')
+        tysz = tysz.order_by("tysord")
         context = {
             'tysz': tysz
         }

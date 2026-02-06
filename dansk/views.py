@@ -73,6 +73,7 @@ class Base(View):
 class AView(View):
     def get(self, request, *args, **kwargs):
         dana = Alfabet.objects.filter(bogstav__bogstav__contains = 'danA')
+        dana = dana.order_by("danord")
         context = {
             'dana': dana
         }
@@ -82,7 +83,7 @@ class AView(View):
 class BView(View):
     def get(self, request, *args, **kwargs):
         danb = Alfabet.objects.filter(bogstav__bogstav__contains='danB')
-       
+        danb = danb.order_by("danord")
         context = {
             'danb': danb
         }
@@ -91,6 +92,7 @@ class BView(View):
 class CView(View):
     def get(self, request, *args, **kwargs):
         danc = Alfabet.objects.filter(bogstav__bogstav__contains='danC')
+        danc = danc.order_by("danord")
         context = {
             'danc': danc
         }
@@ -99,6 +101,7 @@ class CView(View):
 class DView(View):
     def get(self, request, *args, **kwargs):
         dand = Alfabet.objects.filter(bogstav__bogstav__contains='danD')
+        dand = dand.order_by("danord")
         context = {
             'dand': dand
         }
@@ -107,6 +110,7 @@ class DView(View):
 class EView(View):
     def get(self, request, *args, **kwargs):
         dane = Alfabet.objects.filter(bogstav__bogstav__contains='danE')
+        dane = dane.order_by("danord")
         context = {
             'dane': dane
         }
@@ -115,6 +119,7 @@ class EView(View):
 class FView(View):
     def get(self, request, *args, **kwargs):
         danf = Alfabet.objects.filter(bogstav__bogstav__contains='danF')
+        danf = danf.order_by("danord")
         context = {
             'danf': danf
         }
@@ -123,6 +128,7 @@ class FView(View):
 class GView(View):
     def get(self, request, *args, **kwargs):
         dang = Alfabet.objects.filter(bogstav__bogstav__contains='danG')
+        dang = dang.order_by("danord")
         context = {
             'dang': dang
         }
@@ -131,6 +137,7 @@ class GView(View):
 class HView(View):
     def get(self, request, *args, **kwargs):
         danh = Alfabet.objects.filter(bogstav__bogstav__contains='danH')
+        danh = danh.order_by("danord")
         context = {
             'danh': danh
         }
@@ -139,6 +146,7 @@ class HView(View):
 class IView(View):
     def get(self, request, *args, **kwargs):
         dani = Alfabet.objects.filter(bogstav__bogstav__contains='danI')
+        dani = dani.order_by("danord")
         context = {
             'dani': dani
         }
@@ -147,6 +155,7 @@ class IView(View):
 class JView(View):
     def get(self, request, *args, **kwargs):
         danj = Alfabet.objects.filter(bogstav__bogstav__contains='danJ')
+        danj = danj.order_by("danord")
         context = {
             'danj': danj
         }
@@ -155,6 +164,7 @@ class JView(View):
 class KView(View):
     def get(self, request, *args, **kwargs):
         dank = Alfabet.objects.filter(bogstav__bogstav__contains='danK')
+        dank = dank.order_by("danord")
         context = {
             'dank': dank
         }
@@ -163,6 +173,7 @@ class KView(View):
 class LView(View):
     def get(self, request, *args, **kwargs):
         danl = Alfabet.objects.filter(bogstav__bogstav__contains='danL')
+        danl = danl.order_by("danord")
         context = {
             'danl': danl
         }
@@ -171,6 +182,7 @@ class LView(View):
 class MView(View):
     def get(self, request, *args, **kwargs):
         danm = Alfabet.objects.filter(bogstav__bogstav__contains='danM')
+        danm = danm.order_by("danord")
         context = {
             'danm': danm
         }
@@ -179,6 +191,7 @@ class MView(View):
 class NView(View):
     def get(self, request, *args, **kwargs):
         dann = Alfabet.objects.filter(bogstav__bogstav__contains='danN')
+        dann = dann.order_by("danord")
         context = {
             'dann': dann
         }
@@ -187,6 +200,7 @@ class NView(View):
 class OView(View):
     def get(self, request, *args, **kwargs):
         dano = Alfabet.objects.filter(bogstav__bogstav__contains='danO')
+        dano = dano.order_by("danord")
         context = {
             'dano': dano
         }
@@ -195,6 +209,7 @@ class OView(View):
 class PView(View):
     def get(self, request, *args, **kwargs):
         danp = Alfabet.objects.filter(bogstav__bogstav__contains='danP')
+        danp = danp.order_by("danord")
         context = {
             'danp': danp
         }
@@ -203,6 +218,7 @@ class PView(View):
 class QView(View):
     def get(self, request, *args, **kwargs):
         danq = Alfabet.objects.filter(bogstav__bogstav__contains='danQ')
+        danq = danq.order_by("danord")
         context = {
             'danq': danq
         }
@@ -211,6 +227,7 @@ class QView(View):
 class RView(View):
     def get(self, request, *args, **kwargs):
         danr = Alfabet.objects.filter(bogstav__bogstav__contains='danR')
+        danr = danr.order_by("danord")
         context = {
             'danr': danr
         }
@@ -219,6 +236,7 @@ class RView(View):
 class SView(View):
     def get(self, request, *args, **kwargs):
         dans = Alfabet.objects.filter(bogstav__bogstav__contains='danS')
+        dans = dans.order_by("danord")
         context = {
             'dans': dans
         }
@@ -227,6 +245,7 @@ class SView(View):
 class TView(View):
     def get(self, request, *args, **kwargs):
         dant = Alfabet.objects.filter(bogstav__bogstav__contains='danT')
+        dant = dant.order_by("danord")
         context = {
             'dant': dant
         }
@@ -235,6 +254,7 @@ class TView(View):
 class UView(View):
     def get(self, request, *args, **kwargs):
         danu = Alfabet.objects.filter(bogstav__bogstav__contains='danU')
+        danu = danu.order_by("danord")
         context = {
             'danu': danu
         }
@@ -243,6 +263,7 @@ class UView(View):
 class VView(View):
     def get(self, request, *args, **kwargs):
         danv = Alfabet.objects.filter(bogstav__bogstav__contains='danV')
+        danv = danv.order_by("danord")
         context = {
             'danv': danv
         }
@@ -251,6 +272,7 @@ class VView(View):
 class WView(View):
     def get(self, request, *args, **kwargs):
         danw = Alfabet.objects.filter(bogstav__bogstav__contains='danW')
+        danw = danw.order_by("danord")
         context = {
             'danw': danw
         }
@@ -259,6 +281,7 @@ class WView(View):
 class XView(View):
     def get(self, request, *args, **kwargs):
         danx = Alfabet.objects.filter(bogstav__bogstav__contains='danX')
+        danx = danx.order_by("danord")
         context = {
             'danx': danx
         }
@@ -267,6 +290,7 @@ class XView(View):
 class YView(View):
     def get(self, request, *args, **kwargs):
         dany = Alfabet.objects.filter(bogstav__bogstav__contains='danY')
+        dany = dany.order_by("danord")
         context = {
             'dany': dany
         }
@@ -275,6 +299,7 @@ class YView(View):
 class ZView(View):
     def get(self, request, *args, **kwargs):
         danz = Alfabet.objects.filter(bogstav__bogstav__contains='danZ')
+        danz = danz.order_by("danord")
         context = {
             'danz': danz
         }
@@ -283,6 +308,7 @@ class ZView(View):
 class ÆView(View):
     def get(self, request, *args, **kwargs):
         danæ = Alfabet.objects.filter(bogstav__bogstav__contains='danÆ')
+        danæ = danæ.order_by("danord")
         context = {
             'danæ': danæ
         }
@@ -291,6 +317,7 @@ class ÆView(View):
 class ØView(View):
     def get(self, request, *args, **kwargs):
         danø = Alfabet.objects.filter(bogstav__bogstav__contains='danØ')
+        danø = danø.order_by("danord")
         context = {
             'danø': danø
         }
@@ -299,6 +326,7 @@ class ØView(View):
 class ÅView(View):
     def get(self, request, *args, **kwargs):
         danå = Alfabet.objects.filter(bogstav__bogstav__contains='danÅ')
+        danå = danå.order_by("danord")
         context = {
             'danå': danå
         }

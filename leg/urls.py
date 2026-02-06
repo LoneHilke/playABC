@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import Base, Gæt2View, Tilføj, GætaView, GætbView,GætcView,GætdView,GæteView,GætfView
+from .views import Base, Gæt2View, Tilføj, GætaView, GætbView,GætcView,GætdView,GæteView,GætfView,GætgView, GæthView,GætiView,GætjView,GætkView,GætlView,GætmView, GætnView,GætoView,GætpView,GætqView,GætrView,GætsView, GættView,GætuView,GætvView,GætwView,GætxView,GætyView, GætzView,GætæView,GætøView,GætåView, GuesView, GuesaView
 
 urlpatterns = [
     path('', Base.as_view(), name='base'),
@@ -12,5 +12,30 @@ urlpatterns = [
     path("gætd/", GætdView.as_view(), name='gætd'),
     path("gæte/", GæteView.as_view(), name='gæte'),
     path("gætf/", GætfView.as_view(), name='gætf'),
-    
+    path("gætg/", GætgView.as_view(), name="gætg"),
+    path("gæth/", GæthView.as_view(), name='gæth'),
+    path("gæti/", GætiView.as_view(), name='gæti'),
+    path("gætj/", GætjView.as_view(), name='gætj'),
+    path("gætk/", GætkView.as_view(), name='gætk'),
+    path("gætl/", GætlView.as_view(), name='gætl'),
+    path("gætm/", GætmView.as_view(), name="gætm"),
+    path("gætn/", GætnView.as_view(), name='gætn'),
+    path("gæto/", GætoView.as_view(), name='gæto'),
+    path("gætp/", GætpView.as_view(), name='gætp'),
+    path("gætq/", GætqView.as_view(), name='gætq'),
+    path("gætr/", GætrView.as_view(), name='gætr'),
+    path("gæts/", GætsView.as_view(), name="gæts"),
+    path("gætt/", GættView.as_view(), name='gætt'),
+    path("gætu/", GætuView.as_view(), name='gætu'),
+    path("gætv/", GætvView.as_view(), name='gætv'),
+    path("gætw/", GætwView.as_view(), name='gætw'),
+    path("gætx/", GætxView.as_view(), name='gætx'),
+    path("gæty/", GætyView.as_view(), name="gæty"),
+    path("gætz/", GætzView.as_view(), name='gætz'),
+    path("gætæ/", GætæView.as_view(), name='gætæ'),
+    path("gætø/", GætøView.as_view(), name='gætø'),
+    path("gætå/", GætåView.as_view(), name='gætå'),
+    path("gues/", GuesView.as_view(), name="gues"),
+    path("guesa/", GuesaView.as_view(), name="guesa"),
+       
 ]

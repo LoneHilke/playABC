@@ -68,6 +68,7 @@ class Base(View):
 class EngelskAView(View):
     def get(self, request, *args, **kwargs):
         enga = Alfabet.objects.filter(bogstav__bogstav__contains = 'enga')
+        enga = enga.order_by("engord")
         context = {
             'enga': enga
         }
@@ -76,6 +77,7 @@ class EngelskAView(View):
 class EngelskBView(View):
     def get(self, request, *args, **kwargs):
         engb = Alfabet.objects.filter(bogstav__bogstav__contains = 'engb')
+        engb = engb.order_by("engord")
         context = {
             'engb': engb
         }
@@ -84,6 +86,7 @@ class EngelskBView(View):
 class EngelskCView(View):
     def get(self, request, *args, **kwargs):
         engc = Alfabet.objects.filter(bogstav__bogstav__contains = 'engc')
+        engc = engc.order_by("engord")
         context = {
             'engc': engc
         }
@@ -92,6 +95,7 @@ class EngelskCView(View):
 class EngelskDView(View):
     def get(self, request, *args, **kwargs):
         engd = Alfabet.objects.filter(bogstav__bogstav__contains = 'engd')
+        engd = engd.order_by("engord")
         context = {
             'engd': engd
         }
@@ -100,6 +104,7 @@ class EngelskDView(View):
 class EngelskEView(View):
     def get(self, request, *args, **kwargs):
         enge = Alfabet.objects.filter(bogstav__bogstav__contains = 'enge')
+        enge = enge.order_by("engord")
         context = {
             'enge': enge
         }
@@ -108,6 +113,7 @@ class EngelskEView(View):
 class EngelskFView(View):
     def get(self, request, *args, **kwargs):
         engf = Alfabet.objects.filter(bogstav__bogstav__contains = 'engf')
+        engf = engf.order_by("engord")
         context = {
             'engf': engf
         }
@@ -116,6 +122,7 @@ class EngelskFView(View):
 class EngelskGView(View):
     def get(self, request, *args, **kwargs):
         engg = Alfabet.objects.filter(bogstav__bogstav__contains = 'engg')
+        engg = engg.order_by("engord")
         context = {
             'engg': engg
         }
@@ -124,6 +131,7 @@ class EngelskGView(View):
 class EngelskHView(View):
     def get(self, request, *args, **kwargs):
         engh = Alfabet.objects.filter(bogstav__bogstav__contains = 'engh')
+        engh = engh.order_by("engord")
         context = {
             'engh': engh
         }
@@ -132,6 +140,7 @@ class EngelskHView(View):
 class EngelskIView(View):
     def get(self, request, *args, **kwargs):
         engi = Alfabet.objects.filter(bogstav__bogstav__contains = 'engi')
+        engi = engi.order_by("engord")
         context = {
             'engi': engi
         }
@@ -140,6 +149,7 @@ class EngelskIView(View):
 class EngelskJView(View):
     def get(self, request, *args, **kwargs):
         engj = Alfabet.objects.filter(bogstav__bogstav__contains = 'engj')
+        engj = engj.order_by("engord")
         context = {
             'engj': engj
         }
@@ -148,6 +158,7 @@ class EngelskJView(View):
 class EngelskKView(View):
     def get(self, request, *args, **kwargs):
         engk = Alfabet.objects.filter(bogstav__bogstav__contains = 'engk')
+        engk = engk.order_by("engord")
         context = {
             'engk': engk
         }
@@ -156,6 +167,7 @@ class EngelskKView(View):
 class EngelskLView(View):
     def get(self, request, *args, **kwargs):
         engl = Alfabet.objects.filter(bogstav__bogstav__contains = 'engl')
+        engl = engl.order_by("engord")
         context = {
             'engl': engl
         }
@@ -164,6 +176,7 @@ class EngelskLView(View):
 class EngelskMView(View):
     def get(self, request, *args, **kwargs):
         engm = Alfabet.objects.filter(bogstav__bogstav__contains = 'engm')
+        engm = engm.order_by("engord")
         context = {
             'engm': engm
         }
@@ -172,6 +185,7 @@ class EngelskMView(View):
 class EngelskNView(View):
     def get(self, request, *args, **kwargs):
         engn = Alfabet.objects.filter(bogstav__bogstav__contains = 'engn')
+        engn = engn.order_by("engord")
         context = {
             'engn': engn
         }
@@ -180,6 +194,7 @@ class EngelskNView(View):
 class EngelskOView(View):
     def get(self, request, *args, **kwargs):
         engo = Alfabet.objects.filter(bogstav__bogstav__contains = 'engo')
+        engo = engo.order_by("engord")
         context = {
             'engo': engo
         }
@@ -188,6 +203,7 @@ class EngelskOView(View):
 class EngelskPView(View):
     def get(self, request, *args, **kwargs):
         engp = Alfabet.objects.filter(bogstav__bogstav__contains = 'engp')
+        engp = engp.order_by("engord")
         context = {
             'engp': engp
         }
@@ -196,6 +212,7 @@ class EngelskPView(View):
 class EngelskQView(View):
     def get(self, request, *args, **kwargs):
         engq = Alfabet.objects.filter(bogstav__bogstav__contains = 'engq')
+        engq = engq.order_by("engord")
         context = {
             'engq': engq
         }
@@ -204,6 +221,7 @@ class EngelskQView(View):
 class EngelskRView(View):
     def get(self, request, *args, **kwargs):
         engr = Alfabet.objects.filter(bogstav__bogstav__contains = 'engr')
+        engr = engr.order_by("engord")
         context = {
             'engr': engr
         }
@@ -212,6 +230,7 @@ class EngelskRView(View):
 class EngelskSView(View):
     def get(self, request, *args, **kwargs):
         engs = Alfabet.objects.filter(bogstav__bogstav__contains = 'engs')
+        engs = engs.order_by("engord")
         context = {
             'engs': engs
         }
@@ -220,6 +239,7 @@ class EngelskSView(View):
 class EngelskTView(View):
     def get(self, request, *args, **kwargs):
         engt = Alfabet.objects.filter(bogstav__bogstav__contains = 'engt')
+        engt = engt.order_by("engord")
         context = {
             'engt': engt
         }
@@ -228,6 +248,7 @@ class EngelskTView(View):
 class EngelskUView(View):
     def get(self, request, *args, **kwargs):
         engu = Alfabet.objects.filter(bogstav__bogstav__contains = 'engu')
+        engu = engu.order_by("engord")
         context = {
             'engu': engu
         }
@@ -236,6 +257,7 @@ class EngelskUView(View):
 class EngelskVView(View):
     def get(self, request, *args, **kwargs):
         engv = Alfabet.objects.filter(bogstav__bogstav__contains = 'engv')
+        engv = engv.order_by("engord")
         context = {
             'engv': engv
         }
@@ -244,6 +266,7 @@ class EngelskVView(View):
 class EngelskWView(View):
     def get(self, request, *args, **kwargs):
         engw = Alfabet.objects.filter(bogstav__bogstav__contains = 'engw')
+        engw = engw.order_by("engord")
         context = {
             'engw': engw
         }
@@ -252,6 +275,7 @@ class EngelskWView(View):
 class EngelskXView(View):
     def get(self, request, *args, **kwargs):
         engx = Alfabet.objects.filter(bogstav__bogstav__contains = 'engx')
+        engx = engx.order_by("engord")
         context = {
             'engx': engx
         }
@@ -260,6 +284,7 @@ class EngelskXView(View):
 class EngelskYView(View):
     def get(self, request, *args, **kwargs):
         engy = Alfabet.objects.filter(bogstav__bogstav__contains = 'engy')
+        engy = engy.order_by("engord")
         context = {
             'engy': engy
         }
@@ -268,6 +293,7 @@ class EngelskYView(View):
 class EngelskZView(View):
     def get(self, request, *args, **kwargs):
         engz = Alfabet.objects.filter(bogstav__bogstav__contains = 'engz')
+        engz = engz.order_by("engord")
         context = {
             'engz': engz
         }
