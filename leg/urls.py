@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import Base, Gæt2View, Tilføj, GætaView, GætbView,GætcView,GætdView,GæteView,GætfView,GætgView, GæthView,GætiView,GætjView,GætkView,GætlView,GætmView, GætnView,GætoView,GætpView,GætqView,GætrView,GætsView, GættView,GætuView,GætvView,GætwView,GætxView,GætyView, GætzView,GætæView,GætøView,GætåView, GuesView, GuesaView
+from .views import Base, Gæt2View, Tilføj, GætaView, GætbView,GætcView,GætdView,GæteView,GætfView,GætgView, GæthView,GætiView,GætjView,GætkView,GætlView,GætmView, GætnView,GætoView,GætpView,GætqView,GætrView,GætsView, GættView,GætuView,GætvView,GætwView,GætxView,GætyView, GætzView,GætæView,GætøView,GætåView, GuesView, GuesaView,GuesbView, GuescView, GuesdView,GueseView,GuesfView,GuesgView,GueshView,GuesaView,GuesbView, GuescView, GuesdView,GueseView,GuesfView,GuesgView,GueshView,GuesiView,GuesjView, GueskView, GueslView,GuesmView,GuesnView,GuesoView,GuespView,GuesqView,GuesrView, GuessView, GuestView,GuesuView,GuesvView,GueswView,GuesxView,GuesyView,GueszView,RadView,RadaView
 
 urlpatterns = [
     path('', Base.as_view(), name='base'),
@@ -37,5 +37,31 @@ urlpatterns = [
     path("gætå/", GætåView.as_view(), name='gætå'),
     path("gues/", GuesView.as_view(), name="gues"),
     path("guesa/", GuesaView.as_view(), name="guesa"),
-       
+    path("guesb/", GuesbView.as_view(), name="guesb"),
+    path("guesc/", GuescView.as_view(), name="guesc"),
+    path("guesd/", GuesdView.as_view(), name="guesd"),
+    path("guese/", GueseView.as_view(), name="guese"),
+    path("guesf/", GuesfView.as_view(), name="guesf"),
+    path("guesg/", GuesgView.as_view(), name="guesg"),
+    path("guesh/", GueshView.as_view(), name="guesh"),
+    path("guesi/", GuesiView.as_view(), name="guesi"),
+    path("guesj/", GuesjView.as_view(), name="guesj"),
+    path("guesk/", GueskView.as_view(), name="guesk"),
+    path("guesl/", GueslView.as_view(), name="guesl"),
+    path("guesm/", GuesmView.as_view(), name="guesm"),
+    path("guesn/", GuesnView.as_view(), name="guesn"),
+    path("gueso/", GuesoView.as_view(), name="gueso"),
+    path("guesp/", GuespView.as_view(), name="guesp"),
+    path("guesq/", GuesqView.as_view(), name="guesq"),
+    path("guesr/", GuesrView.as_view(), name="guesr"),
+    path("guess/", GuessView.as_view(), name="guess"),
+    path("guest/", GuestView.as_view(), name="guest"),
+    path("guesu/", GuesuView.as_view(), name="guesu"),
+    path("guesv/", GuesvView.as_view(), name="guesv"),
+    path("guesw/", GueswView.as_view(), name="guesw"),
+    path("guesx/", GuesxView.as_view(), name="guesx"),
+    path("guesy/", GuesyView.as_view(), name="guesy"),
+    path("guesz/", GueszView.as_view(), name="guesz"),
+    path('rad/', RadView.as_view(), name='rad'),
+    path('rada/', RadaView.as_view(), name='rada'),   
 ]

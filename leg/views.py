@@ -899,14 +899,772 @@ class GuesaView(View):
         bogstav = obj.bogstav.first()
 
         gæt = request.POST.get("gæt", "").strip().lower()
-        korrekt = obj.danord.lower()
+        korrekt = obj.engord.lower()
 
-        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.danord}"
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
 
         nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
 
         return render(request, "leg/guesa.html", {
             "enga": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesbView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engb")
+        engb = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesb.html", {
+            "engb": engb,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesb.html", {
+            "engb": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuescView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engc")
+        engc = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesc.html", {
+            "engc": engc,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesc.html", {
+            "engc": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesdView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engd")
+        engd = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesd.html", {
+            "engd": engd,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesd.html", {
+            "engd": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GueseView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="enge")
+        enge = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guese.html", {
+            "enge": enge,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guese.html", {
+            "enge": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesfView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engf")
+        engf = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesf.html", {
+            "engf": engf,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesf.html", {
+            "engf": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesgView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engg")
+        engg = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesg.html", {
+            "engg": engg,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesg.html", {
+            "engg": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GueshView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engh")
+        engh = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesh.html", {
+            "engh": engh,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesh.html", {
+            "engh": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesiView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engi")
+        engi = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesi.html", {
+            "engi": engi,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesi.html", {
+            "engi": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesjView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engj")
+        engj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesj.html", {
+            "engj": engj,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesj.html", {
+            "engj": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GueskView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engk")
+        engk = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesk.html", {
+            "engk": engk,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesk.html", {
+            "engk": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GueslView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engl")
+        engl = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesl.html", {
+            "engl": engl,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesl.html", {
+            "engl": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesmView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engm")
+        engm = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesm.html", {
+            "engm": engm,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesm.html", {
+            "engm": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesnView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engn")
+        engn = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesn.html", {
+            "engn": engn,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesn.html", {
+            "engn": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesoView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engo")
+        engo = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/gueso.html", {
+            "engo": engo,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/gueso.html", {
+            "engo": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuespView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engp")
+        engp = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesp.html", {
+            "engp": engp,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesp.html", {
+            "engp": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesqView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engq")
+        engq = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesq.html", {
+            "engq": engq,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesq.html", {
+            "engq": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesrView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engr")
+        engr = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesr.html", {
+            "engr": engr,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesr.html", {
+            "engr": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuessView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engs")
+        engs = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guess.html", {
+            "engs": engs,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guess.html", {
+            "engs": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuestView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engt")
+        engt = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guest.html", {
+            "engt": engt,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guest.html", {
+            "engt": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesuView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engu")
+        engu = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesu.html", {
+            "engu": engu,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesu.html", {
+            "engu": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesvView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engv")
+        engv = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesv.html", {
+            "engv": engv,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesv.html", {
+            "engv": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GueswView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engw")
+        engw = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesw.html", {
+            "engw": engw,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesw.html", {
+            "engw": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesxView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engx")
+        engx = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesx.html", {
+            "engx": engx,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesx.html", {
+            "engx": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GuesyView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engy")
+        engy = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesy.html", {
+            "engy": engy,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesy.html", {
+            "engy": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class GueszView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="engz")
+        engz = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesz.html", {
+            "engz": engz,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.engord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/guesz.html", {
+            "engz": nyt_obj,
+            "form": GætForm(),
+            "resultat": resultat,
+        })
+    
+class RadView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'leg/rad.html')
+    
+class RadaView(View):
+    def get(self, request):
+        bogstav = Bogstav.objects.get(bogstav="tysa")
+        tysa = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/rada.html", {
+            "tysa": tysa,
+            "form": GætForm(),
+            "resultat": None,
+        })
+
+    def post(self, request):
+        alfabet_id = request.POST.get("alfabet_id")
+        obj = Alfabet.objects.get(id=alfabet_id)
+        bogstav = obj.bogstav.first()
+
+        gæt = request.POST.get("gæt", "").strip().lower()
+        korrekt = obj.tysord.lower()
+
+        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.tysord}"
+
+        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
+
+        return render(request, "leg/rada.html", {
+            "tysa": nyt_obj,
             "form": GætForm(),
             "resultat": resultat,
         })

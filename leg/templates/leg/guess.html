@@ -1,0 +1,27 @@
+{% extends "leg/base.html" %}
+{% block content %}
+
+<h4>S</h4>
+
+{% if engs %}
+    <img src="{{ engs.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    <label for="gæt-engs">Hvad forestiller billedet?</label>
+    <input type="text" name="gæt" id="gæt-engs">
+    <input type="hidden" name="alfabet_id" value="{{ engs.id }}">
+    <button type="submit">Tjek</button>
+</form>
+
+{% if resultat %}
+    <p><strong>{{ resultat }}</strong></p>
+{% endif %}
+
+<hr>
+
+<a class="btn btn-success" href="{% url "gues" %}">Tilbage</a>
+<a class="btn btn-success" href="{% url "guest" %}">Næste</a>
+
+{% endblock content %}
