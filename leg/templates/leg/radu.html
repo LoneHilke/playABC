@@ -1,0 +1,28 @@
+{% extends "leg/base.html" %}
+{% block content %}
+
+<h4>U</h4>
+
+{% if tysu %}
+    <img src="{{ tysu.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    <label for="gæt-tysu">Hvad forestiller billedet?</label>
+    <input type="text" name="gæt" id="gæt-tysu">
+    <input type="hidden" name="alfabet_id" value="{{ tysu.id }}">
+    <button type="submit">Tjek</button>
+</form>
+
+{% if resultat %}
+    <p><strong>{{ resultat }}</strong></p>
+{% endif %}
+
+<hr>
+
+<a class="btn btn-success" href="{% url "rad" %}">Tilbage</a>
+<a class="btn btn-success" href="{% url "radv" %}">Næste</a>
+
+
+{% endblock content %}

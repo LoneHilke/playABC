@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import Base, Gæt2View, Tilføj, GætaView, GætbView,GætcView,GætdView,GæteView,GætfView,GætgView, GæthView,GætiView,GætjView,GætkView,GætlView,GætmView, GætnView,GætoView,GætpView,GætqView,GætrView,GætsView, GættView,GætuView,GætvView,GætwView,GætxView,GætyView, GætzView,GætæView,GætøView,GætåView, GuesView, GuesaView,GuesbView, GuescView, GuesdView,GueseView,GuesfView,GuesgView,GueshView,GuesaView,GuesbView, GuescView, GuesdView,GueseView,GuesfView,GuesgView,GueshView,GuesiView,GuesjView, GueskView, GueslView,GuesmView,GuesnView,GuesoView,GuespView,GuesqView,GuesrView, GuessView, GuestView,GuesuView,GuesvView,GueswView,GuesxView,GuesyView,GueszView,RadView,RadaView
+from .views import Base, Gæt2View, Tilføj, GætaView, GætbView,GætcView,GætdView,GæteView,GætfView,GætgView, GæthView,GætiView,GætjView,GætkView,GætlView,GætmView, GætnView,GætoView,GætpView,GætqView,GætrView,GætsView, GættView,GætuView,GætvView,GætwView,GætxView,GætyView, GætzView,GætæView,GætøView,GætåView, GuesView, GuesaView,GuesbView, GuescView, GuesdView,GueseView,GuesfView,GuesgView,GueshView,GuesaView,GuesbView, GuescView, GuesdView,GueseView,GuesfView,GuesgView,GueshView,GuesiView,GuesjView, GueskView, GueslView,GuesmView,GuesnView,GuesoView,GuespView,GuesqView,GuesrView, GuessView, GuestView,GuesuView,GuesvView,GueswView,GuesxView,GuesyView,GueszView,RadView,RadaView,RadbView,RadcView,RaddView,RadeView,RadfView,RadgView,RadhView,RadiView,RadjView,RadkView,RadlView,RadmView,RadnView,RadoView,RadpView,RadqView,RadrView,RadsView,RadtView,RaduView,RadvView,RadwView,RadxView,RadyView,RadzView,ManglerView,OpgaveView,Opgave1View,Opgave2View
 
 urlpatterns = [
     path('', Base.as_view(), name='base'),
@@ -63,5 +63,36 @@ urlpatterns = [
     path("guesy/", GuesyView.as_view(), name="guesy"),
     path("guesz/", GueszView.as_view(), name="guesz"),
     path('rad/', RadView.as_view(), name='rad'),
-    path('rada/', RadaView.as_view(), name='rada'),   
+    path('rada/', RadaView.as_view(), name='rada'),
+    path('radb/', RadbView.as_view(), name='radb'),
+    path('radc/', RadcView.as_view(), name='radc'),
+    path('radd/', RaddView.as_view(), name='radd'),
+    path('rade/', RadeView.as_view(), name='rade'),
+    path('radf/', RadfView.as_view(), name='radf'),
+    path('radg/', RadgView.as_view(), name='radg'),
+    path('radh/', RadhView.as_view(), name='radh'),
+    path('radi/', RadiView.as_view(), name='radi'),
+    path('radj/', RadjView.as_view(), name='radj'),
+    path('radk/', RadkView.as_view(), name='radk'),
+    path('radl/', RadlView.as_view(), name='radl'),
+    path('radm/', RadmView.as_view(), name='radm'),
+    path('radn/', RadnView.as_view(), name='radn'),
+    path('rado/', RadoView.as_view(), name='rado'),
+    path('radp/', RadpView.as_view(), name='radp'),
+    path('radq/', RadqView.as_view(), name='radq'),
+    path('radr/', RadrView.as_view(), name='radr'),
+    path('rads/', RadsView.as_view(), name='rads'),
+    path('radt/', RadtView.as_view(), name='radt'),
+    path('radu/', RaduView.as_view(), name='radu'),
+    path('radv/', RadvView.as_view(), name='radv'),
+    path('radw/', RadwView.as_view(), name='radw'),
+    path('radx/', RadxView.as_view(), name='radx'),
+    path('rady/', RadyView.as_view(), name='rady'),
+    path('radz/', RadzView.as_view(), name='radz'),
+    path('mangler/', ManglerView.as_view(), name='mangler'),
+    path('opgave/', OpgaveView.as_view(), name='opgave'),
+    path('opgave1/', Opgave1View.as_view(), name='opgave1'),
+    path('opgave2/', Opgave2View.as_view(), name='opgave2'),
+   
 ]
+     

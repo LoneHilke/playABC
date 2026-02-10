@@ -1,0 +1,28 @@
+{% extends "leg/base.html" %}
+{% block content %}
+
+<h4>K</h4>
+
+{% if tysk %}
+    <img src="{{ tysk.image.url }}" alt="Billede" style="max-width: 300px;"><br>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    <label for="gæt-tysk">Hvad forestiller billedet?</label>
+    <input type="text" name="gæt" id="gæt-tysk">
+    <input type="hidden" name="alfabet_id" value="{{ tysk.id }}">
+    <button type="submit">Tjek</button>
+</form>
+
+{% if resultat %}
+    <p><strong>{{ resultat }}</strong></p>
+{% endif %}
+
+<hr>
+
+<a class="btn btn-success" href="{% url "rad" %}">Tilbage</a>
+<a class="btn btn-success" href="{% url "radl" %}">Næste</a>
+
+
+{% endblock content %}

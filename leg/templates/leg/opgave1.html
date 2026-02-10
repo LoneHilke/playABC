@@ -1,0 +1,27 @@
+{% extends "leg/base.html" %}
+{% block content %}
+
+<h4>Hvilket er det tyske ord?</h4>
+
+<img src="{{ obj.image.url }}" style="max-width:300px"><br>
+
+<form method="post">
+    {% csrf_token %}
+
+    <p>Vælg mellem:</p>
+    <ul>
+        <li>{{ obj.danord }}</li>
+        <li>{{ obj.engord }}</li>
+        <li>{{ obj.tysord }}</li>
+    </ul>
+
+    <input type="text" name="gæt">
+    <input type="hidden" name="alfabet_id" value="{{ obj.id }}">
+
+    <button type="submit">Tjek</button>
+</form>
+
+{% if resultat %}
+    <p><strong>{{ resultat }}</strong></p>
+{% endif %}
+{% endblock content %}
