@@ -32,9 +32,9 @@ class Base(View):
         danx = Alfabet.objects.filter(bogstav__bogstav__contains='danX')
         dany = Alfabet.objects.filter(bogstav__bogstav__contains='danY')
         danz = Alfabet.objects.filter(bogstav__bogstav__contains='danZ')
-        danæ = Alfabet.objects.filter(bogstav__bogstav__contains='danÆ')
-        danø = Alfabet.objects.filter(bogstav__bogstav__contains='danØ')
-        danå = Alfabet.objects.filter(bogstav__bogstav__contains='danÅ')
+        danae = Alfabet.objects.filter(bogstav__bogstav__contains='danae')
+        danoe = Alfabet.objects.filter(bogstav__bogstav__contains='danoe')
+        danaa = Alfabet.objects.filter(bogstav__bogstav__contains='danaa')
         
         context = {
             'dana': dana,
@@ -63,9 +63,9 @@ class Base(View):
             'danx': danx,
             'dany': dany,
             'danz': danz,
-            'danæ': danæ,
-            'danø': danø,
-            'danå': danå,
+            'danae': danae,
+            'danoe': danoe,
+            'danaa': danaa,
             
         }
         return render(request, 'dansk/info.html', context)
@@ -307,28 +307,28 @@ class ZView(View):
     
 class ÆView(View):
     def get(self, request, *args, **kwargs):
-        danæ = Alfabet.objects.filter(bogstav__bogstav__contains='danÆ')
-        danæ = danæ.order_by("danord")
+        danae = Alfabet.objects.filter(bogstav__bogstav__contains='danae')
+        danae = danae.order_by("danord")
         context = {
-            'danæ': danæ
+            'danae': danae
         }
         return render(request, 'dansk/danskæ.html', context)
     
 class ØView(View):
     def get(self, request, *args, **kwargs):
-        danø = Alfabet.objects.filter(bogstav__bogstav__contains='danØ')
-        danø = danø.order_by("danord")
+        danoe = Alfabet.objects.filter(bogstav__bogstav__contains='danoe')
+        danoe = danoe.order_by("danord")
         context = {
-            'danø': danø
+            'danoe': danoe
         }
         return render(request, 'dansk/danskø.html', context)
     
 class ÅView(View):
     def get(self, request, *args, **kwargs):
-        danå = Alfabet.objects.filter(bogstav__bogstav__contains='danÅ')
-        danå = danå.order_by("danord")
+        danaa = Alfabet.objects.filter(bogstav__bogstav__contains='danaa')
+        danaa = danaa.order_by("danord")
         context = {
-            'danå': danå
+            'danaa': danaa
         }
         return render(request, 'dansk/danskå.html', context)
     

@@ -173,22 +173,7 @@ NAV_MENU_LEFT = [
         "name": "Å",
         "url": "/dansk/danskå",
     },
-    #{
-    #    "name": "Stav til ordet",
-     #   "url": "/gaet",
-    #},
-    #{
-    #    "name": "Find det rette ord",
-    #    "url": "#",
-    #},
-    #{
-    #    "name": "Hvad mangler",
-    #    "url": "#",
-    #},
-    {
-        "name": "Tilføj",
-        "url": "/dansk/tilføj",
-    },
+    
 ]
 NAV_MENU_RIGHT = [
     {

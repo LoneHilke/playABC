@@ -2398,35 +2398,6 @@ class ManglerView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'leg/mangler.html')
     
-"""class OpgaveView(View):
-    def get(self, request):
-        danord = Alfabet.objects.get(bogstav="danord")
-        danord = random.choice(Alfabet.objects.all()).order_by("?").first()
-
-        return render(request, "leg/opgave.html", {
-            "danord": danord,
-            "form": GætForm(),
-            "resultat": None,
-        })
-
-    def post(self, request):
-        alfabet_id = request.POST.get("alfabet_id")
-        obj = Alfabet.objects.get(id=alfabet_id)
-        bogstav = obj.bogstav.first()
-
-        gæt = request.POST.get("gæt", "").strip().lower()
-        korrekt = obj.danord.lower()
-
-        resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.danord}"
-
-        nyt_obj = Alfabet.objects.filter(bogstav=bogstav).order_by("?").first()
-
-        return render(request, "leg/opgave.html", {
-            "danord": nyt_obj,
-            "form": GætForm(),
-            "resultat": resultat,
-        })"""
-
 class OpgaveView(View):
     def get(self, request):
         obj = Alfabet.objects.order_by("?").first()
@@ -2466,7 +2437,7 @@ class Opgave1View(View):
         obj = Alfabet.objects.get(id=alfabet_id)
 
         gæt = request.POST.get("gæt", "").strip().lower()
-        korrekt = obj.danord.lower()
+        korrekt = obj.tysord.lower()
 
         resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.tysord}"
 
@@ -2491,7 +2462,7 @@ class Opgave2View(View):
         obj = Alfabet.objects.get(id=alfabet_id)
 
         gæt = request.POST.get("gæt", "").strip().lower()
-        korrekt = obj.danord.lower()
+        korrekt = obj.engord.lower()
 
         resultat = "✅ Korrekt!" if gæt == korrekt else f"❌ Forkert: {obj.engord}"
 
