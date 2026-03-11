@@ -1,0 +1,94 @@
+{% extends "leg/base.html" %}
+{% block content %}
+
+
+<style>
+    .grid{
+    display:grid;
+    grid-template-columns: repeat(4,120px);
+    gap:10px;
+}
+
+.card{
+    width:120px;
+    height:120px;
+    background:#ddd;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    cursor:pointer;
+    border-radius:10px;
+    border:2px solid #444;
+    cursor:pointer;
+    transition: transform 0.2s;
+}
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hidden{
+    display:none;
+}
+
+</style>
+
+<h2>Memory</h2>
+<h4><font color=green>I dette memory spil skal du finde begyndelsesbogstav og billedet der passer til.<br>Fx. A og abe<br>
+</font>Tryk på knappen for nyt spil</h4>
+<div class="grid">
+{% for card in cards %}
+    <div class="card" data-match="{{ card.match }}">
+
+        {% if card.type == "image" %}
+            <img src="{{ card.value }}" class="hidden">
+        {% else %}
+            <span class="hidden">{{ card.value }}</span>
+        {% endif %}
+
+    </div>
+{% endfor %}
+<a class="btn btn-success" href="{% url "memorytys" %}">Nyt spil</a>
+</div>
+
+<script>
+
+let first = null;
+let second = null;
+
+document.querySelectorAll(".card").forEach(card => {
+
+    card.addEventListener("click", function(){
+
+        let hidden = this.querySelector(".hidden")
+        hidden.style.display = "block"
+
+        if(!first){
+            first = this
+            return
+        }
+
+        second = this
+
+        if(first.dataset.match === second.dataset.match){
+            first = null
+            second = null
+        }else{
+            setTimeout(()=>{
+                first.querySelector(".hidden").style.display="none"
+                second.querySelector(".hidden").style.display="none"
+                first=null
+                second=null
+            },800)
+        }
+
+    })
+
+})
+
+</script>
+
+{% endblock content %}

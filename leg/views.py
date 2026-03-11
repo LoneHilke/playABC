@@ -2472,3 +2472,87 @@ class Opgave2View(View):
             "obj": nyt_obj,
             "resultat": resultat,
         })
+    
+class MemoryView(View):
+
+    def get(self, request):
+
+        items = list(Alfabet.objects.all())
+        valgt = random.sample(items, 8)
+
+        cards = []
+
+        for item in valgt:
+            cards.append({
+                "type": "image",
+                "value": item.image.url,
+                "match": item.id
+            })
+
+            cards.append({
+                "type": "letter",
+                "value": item.danord[0],   # første bogstav
+                "match": item.id
+            })
+
+        random.shuffle(cards)
+
+        return render(request, "leg/memory.html", {
+            "cards": cards
+        })
+    
+class MemoryengView(View):
+
+    def get(self, request):
+
+        items = list(Alfabet.objects.all())
+        valgt = random.sample(items, 8)
+
+        cards = []
+
+        for item in valgt:
+            cards.append({
+                "type": "image",
+                "value": item.image.url,
+                "match": item.id
+            })
+
+            cards.append({
+                "type": "letter",
+                "value": item.engord[0],   # første bogstav
+                "match": item.id
+            })
+
+        random.shuffle(cards)
+
+        return render(request, "leg/memoryeng.html", {
+            "cards": cards
+        })
+    
+class MemorytysView(View):
+
+    def get(self, request):
+
+        items = list(Alfabet.objects.all())
+        valgt = random.sample(items, 8)
+
+        cards = []
+
+        for item in valgt:
+            cards.append({
+                "type": "image",
+                "value": item.image.url,
+                "match": item.id
+            })
+
+            cards.append({
+                "type": "letter",
+                "value": item.tysord[0],   # første bogstav
+                "match": item.id
+            })
+
+        random.shuffle(cards)
+
+        return render(request, "leg/memory.html", {
+            "cards": cards
+        })

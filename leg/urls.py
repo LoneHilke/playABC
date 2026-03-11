@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import Base, Gæt2View, Tilføj, GætaView, GætbView,GætcView,GætdView,GæteView,GætfView,GætgView, GæthView,GætiView,GætjView,GætkView,GætlView,GætmView, GætnView,GætoView,GætpView,GætqView,GætrView,GætsView, GættView,GætuView,GætvView,GætwView,GætxView,GætyView, GætzView,GætæView,GætøView,GætåView, GuesView, GuesaView,GuesbView, GuescView, GuesdView,GueseView,GuesfView,GuesgView,GueshView,GuesaView,GuesbView, GuescView, GuesdView,GueseView,GuesfView,GuesgView,GueshView,GuesiView,GuesjView, GueskView, GueslView,GuesmView,GuesnView,GuesoView,GuespView,GuesqView,GuesrView, GuessView, GuestView,GuesuView,GuesvView,GueswView,GuesxView,GuesyView,GueszView,RadView,RadaView,RadbView,RadcView,RaddView,RadeView,RadfView,RadgView,RadhView,RadiView,RadjView,RadkView,RadlView,RadmView,RadnView,RadoView,RadpView,RadqView,RadrView,RadsView,RadtView,RaduView,RadvView,RadwView,RadxView,RadyView,RadzView,ManglerView,OpgaveView,Opgave1View,Opgave2View
+from .views import Base, Gæt2View, Tilføj, GætaView, GætbView,GætcView,GætdView,GæteView,GætfView,GætgView, GæthView,GætiView,GætjView,GætkView,GætlView,GætmView, GætnView,GætoView,GætpView,GætqView,GætrView,GætsView, GættView,GætuView,GætvView,GætwView,GætxView,GætyView, GætzView,GætæView,GætøView,GætåView, GuesView, GuesaView,GuesbView, GuescView, GuesdView,GueseView,GuesfView,GuesgView,GueshView,GuesaView,GuesbView, GuescView, GuesdView,GueseView,GuesfView,GuesgView,GueshView,GuesiView,GuesjView, GueskView, GueslView,GuesmView,GuesnView,GuesoView,GuespView,GuesqView,GuesrView, GuessView, GuestView,GuesuView,GuesvView,GueswView,GuesxView,GuesyView,GueszView,RadView,RadaView,RadbView,RadcView,RaddView,RadeView,RadfView,RadgView,RadhView,RadiView,RadjView,RadkView,RadlView,RadmView,RadnView,RadoView,RadpView,RadqView,RadrView,RadsView,RadtView,RaduView,RadvView,RadwView,RadxView,RadyView,RadzView,ManglerView,OpgaveView,Opgave1View,Opgave2View,MemoryView,MemoryengView,MemorytysView
 
 urlpatterns = [
     path('', Base.as_view(), name='base'),
@@ -93,6 +93,9 @@ urlpatterns = [
     path('opgave/', OpgaveView.as_view(), name='opgave'),
     path('opgave1/', Opgave1View.as_view(), name='opgave1'),
     path('opgave2/', Opgave2View.as_view(), name='opgave2'),
+    path('memory/', MemoryView.as_view(), name='memory'),
+    path('memoryeng/', MemoryengView.as_view(), name='memoryeng'),
+    path('memorytys/', MemorytysView.as_view(), name='memorytys'),
    
 ]
      
