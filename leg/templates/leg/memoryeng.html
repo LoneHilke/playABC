@@ -37,8 +37,9 @@
 </style>
 
 <h2>Memory</h2>
-<h4><font color=green>I dette memory spil skal du finde begyndelsesbogstav og billedet der passer til.<br>Fx. A og abe<br>
+<h4><font color=green>I dette memory spil skal du finde begyndelsesbogstav og billedet der passer til. Fx. A og abe<br>
 </font>Tryk på knappen for nyt spil</h4>
+<h5>Er der to ens bogstaver, er det ikke ligegyldigt hvilket billede der tages. Spillet har valgt, hvilket billede og bogstav som hører sammen.</h5>
 <div class="grid">
 {% for card in cards %}
     <div class="card" data-match="{{ card.match }}">
