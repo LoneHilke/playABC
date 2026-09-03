@@ -25,7 +25,7 @@
     "danord": "Bil",
     "tysord": "Auto",
     "engord": "Car",
-    "danbe": "En bil må kun køre på veje. Den kan fragte personer og ting fra et sted til et andet.",
+    "danbe": "En bil mÃ¥ kun kÃ¸re pÃ¥ veje. Den kan fragte personer og ting fra et sted til et andet.",
     "tysbe": "Du kanst in ein Auto fahren",
     "engbe": "You can drive a car",
     "bogstav": [
@@ -43,7 +43,7 @@
     "danord": "Bus",
     "tysord": "Bus",
     "engord": "Bus",
-    "danbe": "En bus kan køre mange mennesker på engang",
+    "danbe": "En bus kan kÃ¸re mange mennesker pÃ¥ engang",
     "tysbe": "Ein Bus kann viele leute auf einmal fahren",
     "engbe": "many people can be in a bus",
     "bogstav": [
@@ -79,7 +79,7 @@
     "danord": "Skov",
     "tysord": "Wald",
     "engord": "Forest",
-    "danbe": "En skov består af mange træer",
+    "danbe": "En skov bestÃ¥r af mange trÃ¦er",
     "tysbe": "Ein Wald haben viele Baume",
     "engbe": "Where are many threes in the forrest",
     "bogstav": [
@@ -97,7 +97,7 @@
     "danord": "Pizza",
     "tysord": "Pizza",
     "engord": "Pizza",
-    "danbe": "Pizza kan laves med meget forskelligt fyld på",
+    "danbe": "Pizza kan laves med meget forskelligt fyld pÃ¥",
     "tysbe": "Ein pizza ist meisten rund",
     "engbe": "You can eat a pizza",
     "bogstav": [
@@ -115,7 +115,7 @@
     "danord": "Dukke",
     "tysord": "Puppe",
     "engord": "Doll",
-    "danbe": "En dukke bruger børn, når de leger far, mor børn",
+    "danbe": "En dukke bruger bÃ¸rn, nÃ¥r de leger far, mor bÃ¸rn",
     "tysbe": "Kinder spielen Mamma, Pappa, kinder mit eine Puppe",
     "engbe": "Children play mamma, pappa, children whit a doll",
     "bogstav": [
@@ -167,10 +167,10 @@
   "fields": {
     "image": "images/bolde.png",
     "danord": "Bolde",
-    "tysord": "Bälle",
+    "tysord": "BÃ¤lle",
     "engord": "Balls",
     "danbe": "Bolde bliver brugt i mange sportsgrene",
-    "tysbe": "Kinder spielen gerne mil Bälle",
+    "tysbe": "Kinder spielen gerne mil BÃ¤lle",
     "engbe": "Children plays with balls",
     "bogstav": [
       2,
@@ -187,7 +187,7 @@
     "danord": "Gris",
     "tysord": "Schwein",
     "engord": "Pig",
-    "danbe": "En gris er et dyr som bor på landet og giver os kød",
+    "danbe": "En gris er et dyr som bor pÃ¥ landet og giver os kÃ¸d",
     "tysbe": "Ein Schwein lebt auf dem Land",
     "engbe": "A pig give us meal",
     "bogstav": [
@@ -201,11 +201,11 @@
   "model": "dansk.alfabet",
   "pk": 12,
   "fields": {
-    "image": "images/æble.jpg",
-    "danord": "Æble",
+    "image": "images/Ã¦ble.jpg",
+    "danord": "Ã†ble",
     "tysord": "Apfel",
     "engord": "Apple",
-    "danbe": "Et æble er en frugt",
+    "danbe": "Et Ã¦ble er en frugt",
     "tysbe": "Eine Apfel ist ein obst",
     "engbe": "A apple is a fruit",
     "bogstav": [
@@ -237,11 +237,11 @@
   "model": "dansk.alfabet",
   "pk": 14,
   "fields": {
-    "image": "images/ø.jpg",
-    "danord": "Ø",
+    "image": "images/Ã¸.jpg",
+    "danord": "Ã˜",
     "tysord": "Insel",
     "engord": "Island",
-    "danbe": "En ø er land med vand hele vejen rundt",
+    "danbe": "En Ã¸ er land med vand hele vejen rundt",
     "tysbe": "Eine Insel ist Land, das von Wasser umgeben ist.",
     "engbe": "An island is land surrounded by water.",
     "bogstav": [
@@ -259,7 +259,7 @@
     "danord": "ABC",
     "tysord": "ABC",
     "engord": "ABC",
-    "danbe": "De første 3 bogstaver i alfabetet",
+    "danbe": "De fÃ¸rste 3 bogstaver i alfabetet",
     "tysbe": "Die drei erste bugstaben",
     "engbe": "The first 3 letters",
     "bogstav": [
