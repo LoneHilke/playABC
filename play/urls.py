@@ -14,6 +14,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+
+from django.views.static import serve
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -27,4 +30,5 @@ urlpatterns = [
     path("tysk/", include("tysk.urls")),
     path("engelsk/", include("engelsk.urls")),
     path("leg/", include("leg.urls")),
+    path('image/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
